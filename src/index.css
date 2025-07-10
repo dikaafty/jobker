@@ -12,4 +12,8 @@
     --secondary-foreground: 330 0% 9%;
     --muted: 300 0% 45%;
   }
+
+  .dark {
+    --background: 300 0% 4%;
+  }
 }
