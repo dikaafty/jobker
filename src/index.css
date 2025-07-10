@@ -15,5 +15,6 @@
 
   .dark {
     --background: 300 0% 4%;
+    --foreground: 300 0% 98%;
   }
 }
