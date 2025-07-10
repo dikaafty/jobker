@@ -4,6 +4,8 @@
 
 @theme {
   --font-jost: "Jost";
+
+  --color-background: hsl(var(--background));
 }
 
 @layer base {
