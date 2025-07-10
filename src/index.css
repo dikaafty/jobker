@@ -9,6 +9,7 @@
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
 }
 
 @layer base {
