@@ -1,3 +1,5 @@
+import { clsx, ClassValue } from "clsx";
+
 export const runObserver = (...refs: React.RefObject<HTMLElement>[]): () => void => {
   const options = {
     root: null,
