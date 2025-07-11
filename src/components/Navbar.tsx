@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false);
