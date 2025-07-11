@@ -1,4 +1,4 @@
-const runObserver = (...refs: React.RefObject<HTMLElement>[]): () => void => {
+export const runObserver = (...refs: React.RefObject<HTMLElement>[]): () => void => {
   const options = {
     root: null,
     threshold: 0.5
