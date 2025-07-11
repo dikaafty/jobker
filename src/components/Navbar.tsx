@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 const Navbar = () => {
+  const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false);
+
   return (
     <nav 
       className="w-full font-jost flex justify-between items-center px-8 sm:px-10 py-4 sm:py-5.5"
