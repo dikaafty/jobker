@@ -8,6 +8,23 @@ const Navbar = () => {
       >
         JOBKER.
       </h1>
+
+      {/* Desktop Nav */}
+      <div 
+        className="text-sm font-medium hidden md:flex justify-center items-center gap-12.5"
+      >
+        <a href="/job">
+          Job
+        </a>
+        
+        <a href="/job">
+          Add Job
+        </a>
+
+        <a href="/about">
+          About
+        </a>
+      </div>
     </nav>
   )
 }
