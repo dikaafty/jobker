@@ -1,6 +1,10 @@
 import { clsx, ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+const cn = (...inputs: ClassValue[]): string => {
+  return twMerge(clsx(inputs));
+}
+
 export const runObserver = (...refs: React.RefObject<HTMLElement>[]): () => void => {
   const options = {
     root: null,
