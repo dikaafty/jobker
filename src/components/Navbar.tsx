@@ -20,15 +20,24 @@ const Navbar = () => {
       <div 
         className="text-sm font-semibold hidden md:flex justify-center items-center gap-12.5"
       >
-        <a href="/job">
+        <a 
+          href="/job"
+          className="scale-up-110"
+        >
           Job
         </a>
         
-        <a href="/job">
+        <a 
+          href="/job"
+          className="scale-up-110"
+        >
           Add Job
         </a>
 
-        <a href="/about">
+        <a 
+          href="/about"
+          className="scale-up-110"
+        >
           About
         </a>
       </div>
