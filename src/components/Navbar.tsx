@@ -18,7 +18,7 @@ const Navbar = () => {
 
       {/* Desktop Nav */}
       <div 
-        className="text-sm font-medium hidden md:flex justify-center items-center gap-12.5"
+        className="text-sm font-semibold hidden md:flex justify-center items-center gap-12.5"
       >
         <a href="/job">
           Job
