@@ -19,20 +19,27 @@ const ThemeToggle = () => {
 
   const toggleTheme = (): void => {
     if(isDarkMode) {
-      document.body.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
       setIsDarkMode(false);
     } else {
-      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
     }
   }
 
   return (
-    <div>
-      
-    </div>
+    <button 
+      onClick={toggleTheme}
+      className="w-fit h-fit cursor-pointer"
+    >
+      {
+        isDarkMode 
+        ? <Moon />
+        : <Sun />
+      }
+    </button>
   )
 }
 
