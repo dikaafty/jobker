@@ -91,3 +91,8 @@
 @utility scale-up-110 {
   @apply transition-transform duration-300 hover:scale-110;
 }
+
+@utility primary-button {
+  @apply px-5.5 sm:px-6 py-2.5 bg-primary text-primary-foreground font-jost font-medium text-xs 
+  sm:text-sm rounded-xl cursor-pointer transition-colors duration-300 hover:bg-gray-300;
+}
