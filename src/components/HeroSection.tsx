@@ -6,6 +6,12 @@ const HeroSection = () => {
       >
         <span className="text-fire">YOUR CAREER</span> DASHBOARD STARTS HERE
       </h1>
+
+      <p 
+        className="w-[85%] font-jost font-medium text-sm sm:text-base text-center mt-2.5"
+      >
+        Organize your applications, monitor progress, and take control of your career.
+      </p>
     </section>
   )
 }
