@@ -5,6 +5,7 @@ const Homepage = () => {
   return (
     <>
       <Navbar />
+      <HeroSection />
     </>
   )
 }
