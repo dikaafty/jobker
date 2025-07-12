@@ -71,6 +71,11 @@
     --muted: 0 0% 63%;
   }
 
+  
+  ::selection {
+    @apply bg-foreground text-background;
+  }
+
   body {
     @apply bg-background text-foreground transition-colors duration-300;
   }
