@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section>
+    <section className="flex flex-col justify-center items-center">
       
     </section>
   )
