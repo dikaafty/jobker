@@ -7,7 +7,8 @@ const Navbar = () => {
 
   return (
     <nav 
-      className="w-full font-jost flex justify-between items-center px-8 sm:px-10 py-4 sm:py-5.5 relative"
+      className="w-full font-jost grid grid-cols-[1fr_min-content_min-content] max-md:gap-3
+      md:flex justify-between items-center px-8 sm:px-10 py-4 sm:py-5.5 relative"
     >
       <h1 
         className="text-lg font-extrabold"
