@@ -87,3 +87,7 @@
   before:animate-text-fire before:text-cyan-400 before:transition-all before:duration-300 
   before:whitespace-nowrap before:blur-xl hover:before:blur-2xl;
 }
+
+@utility scale-up-110 {
+  @apply transition-transform duration-300 hover:scale-110;
+}
