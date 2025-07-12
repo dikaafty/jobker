@@ -25,6 +25,24 @@
       opacity: 1;
     }
   }
+
+  @keyframes text-fire {
+    0% {
+      content: "YouR CarEer";
+    }
+    25% {
+      content: "yOuR cAreEr";
+    }
+    50% {
+      content: "YoUr CaReeR";
+    }
+    75% {
+      content: "Your cArEer";
+    }
+    100% {
+      content: "YouR CarEer";
+    }
+  }
 }
 
 @layer base {
