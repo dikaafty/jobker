@@ -80,6 +80,8 @@ const Navbar = () => {
           <div className="w-40 h-0.5 bg-foreground rounded-full" />
         </div>
       </div>
+
+      <ThemeToggle />
     </nav>
   )
 }
