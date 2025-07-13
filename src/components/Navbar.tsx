@@ -22,26 +22,26 @@ const Navbar = () => {
       <div 
         className="text-sm font-semibold hidden md:flex justify-center items-center gap-12.5"
       >
-        <a 
-          href="/job"
+        <NavLink 
+          to="/job"
           className="scale-up-110"
         >
           Job
-        </a>
+        </NavLink>
         
-        <a 
-          href="/job"
+        <NavLink 
+          to="/job"
           className="scale-up-110"
         >
           Add Job
-        </a>
+        </NavLink>
 
-        <a 
-          href="/about"
+        <NavLink 
+          to="/about"
           className="scale-up-110"
         >
           About
-        </a>
+        </NavLink>
       </div>
 
       {/* Mobile Nav */}
