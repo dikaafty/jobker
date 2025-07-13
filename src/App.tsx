@@ -7,7 +7,15 @@ import AboutSection from "@/components/AboutSection";
 const App = () => {
   return (
     <>
-      
+      <BrowserRouter>
+        <Navbar />
+
+        <Routes>
+          <Route index element={<HeroSection />} />
+          <Route path="/job" element={<JobTrackerSection />} />
+          <Route path="/about" element={<AboutSection />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
