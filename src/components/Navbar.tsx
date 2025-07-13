@@ -12,7 +12,7 @@ const Navbar = () => {
     >
       <a 
         href="/"
-        className="text-lg font-extrabold"
+        className="text-lg font-extrabold select-none"
       >
         JOBKER.
       </a>
