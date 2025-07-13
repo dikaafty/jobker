@@ -65,9 +65,9 @@ const Navbar = () => {
 
       <div 
         className={cn(
-          "w-full h-full bg-background text-lg font-bold flex flex-col justify-center",
-          "items-center gap-5 fixed -right-190 top-0 z-10 transition-all duration-500 md:hidden",
-          isMenuOpen ? "right-0 pointer-events-auto" : "-right- 190pointer-events-none"
+          "w-full h-full bg-background text-lg font-bold flex flex-col justify-center items-center",
+          "gap-5 fixed -right-190 top-0 z-10 transition-all ease-in-out duration-500 md:hidden",
+          isMenuOpen ? "right-0 pointer-events-auto" : "-right-190 pointer-events-none"
         )}
       >
         <div className="w-1/2 flex flex-col justify-center items-center gap-2 mb-5">
