@@ -16,17 +16,19 @@ const HeroSection = () => {
       </p>
 
       <div className="mt-5 flex justify-center items-center gap-4">
-        <button
+        <NavLink
+          to="/job"
           className="primary-button"
         >
           Get Started
-        </button>
+        </NavLink>
 
-        <button
+        <NavLink
+          to="/job"
           className="secondary-button"
         >
           Add Job
-        </button>
+        </NavLink>
       </div>
     </section>
   )
