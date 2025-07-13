@@ -46,7 +46,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       <button 
-        className="w-8 h-7 flex flex-col justify-evenly items-center z-50 md:hidden"
+        className="w-8 h-7 flex flex-col justify-evenly items-center z-50 md:hidden cursor-pointer"
         onClick={() => setIsMenuOpen(prev => !prev)}
       >
         <div 
