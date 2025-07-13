@@ -8,12 +8,7 @@ import Navbar from "@/components/Navbar";
 const App = () => {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="*" element={<NotFound />}  />
-        </Routes>
-      </BrowserRouter>
+      
     </>
   )
 }
