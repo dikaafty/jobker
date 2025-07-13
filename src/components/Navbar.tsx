@@ -10,11 +10,12 @@ const Navbar = () => {
       className="w-full font-jost grid grid-cols-[1fr_min-content_min-content] max-md:gap-3
       md:flex justify-between items-center px-10 py-5.5 relative"
     >
-      <h1 
+      <a 
+        href="/"
         className="text-lg font-extrabold"
       >
         JOBKER.
-      </h1>
+      </a>
 
       {/* Desktop Nav */}
       <div 
