@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import ThemeToggle from "./ThemeToggle";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false);
