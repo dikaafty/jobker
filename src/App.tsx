@@ -1,6 +1,7 @@
 import Homepage from "@/pages/Homepage";
 import NotFound from "@/pages/NotFound";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import JobTrackerSection from "@/components/JobTrackerSection";
 
 const App = () => {
   return (
