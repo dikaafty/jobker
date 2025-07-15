@@ -75,8 +75,8 @@ const Navbar = () => {
           <div className="w-32 h-0.5 bg-foreground rounded-full" />
         </div>
 
-        <a href="/job">
-          JOB
+        <a href="/">
+          HOME
         </a>
         
         <a href="/job">
