@@ -75,17 +75,17 @@ const Navbar = () => {
           <div className="w-32 h-0.5 bg-foreground rounded-full" />
         </div>
 
-        <a href="/">
+        <NavLink to="/">
           HOME
-        </a>
+        </NavLink>
         
-        <a href="/job">
+        <NavLink to="/job">
           TRACK JOB
-        </a>
+        </NavLink>
 
-        <a href="/about">
+        <NavLink to="/about">
           ABOUT
-        </a>
+        </NavLink>
 
         <div className="w-1/2 flex flex-col justify-center items-center gap-2 mt-5">
           <div className="w-32 h-0.5 bg-foreground rounded-full" />
