@@ -23,10 +23,10 @@ const Navbar = () => {
         className="text-sm font-semibold hidden md:flex justify-center items-center gap-12.5"
       >
         <NavLink 
-          to="/job"
+          to="/"
           className="scale-up-110"
         >
-          Job
+          Home
         </NavLink>
         
         <NavLink 
