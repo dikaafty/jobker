@@ -75,15 +75,24 @@ const Navbar = () => {
           <div className="w-32 h-0.5 bg-foreground rounded-full" />
         </div>
 
-        <NavLink to="/">
+        <NavLink 
+          to="/"
+          onClick={() => setIsMenuOpen(prev => !prev)}
+        >
           HOME
         </NavLink>
         
-        <NavLink to="/job">
+        <NavLink 
+          to="/job"
+          onClick={() => setIsMenuOpen(prev => !prev)}
+        >
           TRACK JOB
         </NavLink>
 
-        <NavLink to="/about">
+        <NavLink 
+          to="/about"
+          onClick={() => setIsMenuOpen(prev => !prev)}
+        >
           ABOUT
         </NavLink>
 
