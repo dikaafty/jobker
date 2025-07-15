@@ -33,7 +33,7 @@ const Navbar = () => {
           to="/job"
           className="scale-up-110"
         >
-          Add Job
+          Job
         </NavLink>
 
         <NavLink 
