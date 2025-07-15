@@ -80,7 +80,7 @@ const Navbar = () => {
         </a>
         
         <a href="/job">
-          ADD JOB
+          JOB
         </a>
 
         <a href="/about">
