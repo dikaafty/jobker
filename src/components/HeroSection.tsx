@@ -24,10 +24,10 @@ const HeroSection = () => {
         </NavLink>
 
         <NavLink
-          to="/job"
+          to="/about"
           className="secondary-button"
         >
-          Add Job
+          About Us
         </NavLink>
       </div>
     </section>
