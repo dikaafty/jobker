@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <section className="h-[calc(100vh-72px)] flex flex-col justify-center items-center px-8 sm:px-10 pb-10">
+    <section className="">
       <h1
         className="font-jost font-black text-xl sm:text-3xl md:text-4xl text-center"
       >
