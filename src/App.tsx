@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "@/pages/Homepage";
 import JobTrackerPage from "@/pages/JobTrackerPage";
 import Navbar from "@/components/Navbar";
-import AboutPage from "@/components/AboutPage";
+import AboutPage from "@/pages/AboutPage";
 
 const App = () => {
   return (
