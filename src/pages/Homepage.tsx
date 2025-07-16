@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 const Homepage = () => {
   return (
     <>
-
+      <HeroSection />
     </>
   )
 }
