@@ -14,6 +14,22 @@ const HeroSection = () => {
       >
         Organize your applications, monitor progress, and take control of your career.
       </p>
+
+      <div className="mt-5 flex justify-center items-center gap-4">
+        <NavLink
+          to="/job"
+          className="primary-button"
+        >
+          Get Started
+        </NavLink>
+
+        <NavLink
+          to="/about"
+          className="secondary-button"
+        >
+          About Us
+        </NavLink>
+      </div>
     </section>
   )
 }
