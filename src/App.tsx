@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "@/pages/Homepage";
-import JobTrackerPage from "@/components/JobTrackerPage";
+import JobTrackerPage from "@/pages/JobTrackerPage";
 import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/AboutSection";
 
