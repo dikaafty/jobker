@@ -1,4 +1,4 @@
-const JobTrackerSection = () => {
+const JobTrackerPage = () => {
   return (
     <section className="h-[calc(100vh-72px)] px-8 sm:px-10">
       
@@ -6,4 +6,4 @@ const JobTrackerSection = () => {
   )
 }
 
-export default JobTrackerSection;
+export default JobTrackerPage;
