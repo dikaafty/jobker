@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/Homepage";
 import JobTrackerSection from "@/components/JobTrackerSection";
 import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/AboutSection";
