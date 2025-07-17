@@ -54,7 +54,7 @@ const FilterCategoriesButton = ({ filterCategories }: FilterCategoriesButtonProp
         <select
           className="filter-category-select"
         >
-          <option value="All Applications" selected>All Applications</option>
+          <option defaultValue="All Applications">All Applications</option>
           <option value="Bookmarked">Bookmarked</option>
           <option value="Applying">Applying</option>
           <option value="Applied">Applied</option>
