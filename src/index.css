@@ -105,3 +105,7 @@
 @utility filter-category-button {
   @apply w-30 h-17 rounded-xl flex flex-col justify-center items-center gap-1;
 }
+
+@utility filter-category-select {
+  @apply w-35 bg-secondary outline-none pl-3.5 py-2 rounded-sm text-sm font-jost appearance-none;
+}
