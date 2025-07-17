@@ -1,4 +1,5 @@
 import FilterCategoriesButton from "@/components/FilterCategoriesButton";
+import { useState } from "react";
 
 interface FilterCategoriesInterface {
   category: string,
