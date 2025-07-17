@@ -17,7 +17,7 @@ const JobTrackerPage = () => {
 
   return (
     <>
-      <FilterCategoriesButton />
+      <FilterCategoriesButton filterCategories={filterJobCategories} />
     </>
   )
 }
