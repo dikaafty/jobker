@@ -3,7 +3,7 @@ import { useState } from "react";
 import { type FilterCategoriesInterface } from "@/interfaces/filterCategories";
 
 const filterCategories: FilterCategoriesInterface[] = [
-  { category: "BOOKMARK", numberOfItems: 0 },
+  { category: "BOOKMARKED", numberOfItems: 0 },
   { category: "APPLYING", numberOfItems: 0 },
   { category: "APPLIED", numberOfItems: 0 },
   { category: "INTERVIEWING", numberOfItems: 0 },
