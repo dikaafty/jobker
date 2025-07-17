@@ -4,7 +4,7 @@ interface FilterCategoriesButtonProps {
   filterCategories: FilterCategoriesInterface[],
 }
 
-const FilterCategoriesButton = () => {
+const FilterCategoriesButton = ({ filterCategories }: FilterCategoriesButtonProps) => {
   return (
     <div>
       
