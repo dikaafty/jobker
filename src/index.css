@@ -111,6 +111,11 @@
   border-1 border-muted;
 }
 
+.filter-category-select > option:checked {
+  background-color: hsl(var(--secondary-foreground));
+  color: hsl(var(--secondary));
+}
+
 .filter-category-select-wrapper::after {
   content: "⪢";
   background-color: transparent;
