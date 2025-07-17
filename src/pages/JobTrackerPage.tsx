@@ -1,5 +1,6 @@
 import FilterCategoriesButton from "@/components/FilterCategoriesButton";
 import { useState } from "react";
+import { type FilterCategoriesInterface } from "@/interfaces/filterCategories";
 
 const filterCategories: FilterCategoriesInterface[] = [
   { category: "BOOKMARK", numberOfItems: 0 },
