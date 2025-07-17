@@ -20,6 +20,7 @@ const FilterCategoriesButton = ({ filterCategories }: FilterCategoriesButtonProp
                 ? "border-primary cursor-pointer hover:bg-secondary" 
                 : "border-muted"
               )}
+              key={filterCategory.category}
             >
               <p 
                 className={cn(
