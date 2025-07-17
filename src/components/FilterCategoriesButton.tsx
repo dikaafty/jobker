@@ -46,6 +46,22 @@ const FilterCategoriesButton = ({ filterCategories }: FilterCategoriesButtonProp
           ))
         }
       </div>
+
+      {/* Mobile filter categories */}
+
+      <div className="filter-category-select-wrapper relative w-fit pl-4 mt-2 block md:hidden">
+        <select
+          className="filter-category-select"
+        >
+          <option value="All Applications" selected>All Applications</option>
+          <option value="Bookmarked">Bookmarked</option>
+          <option value="Applying">Applying</option>
+          <option value="Applied">Applied</option>
+          <option value="Interviewing">Interviewing</option>
+          <option value="Negotiating">Negotiating</option>
+          <option value="Accepted">Accepted</option>
+        </select>
+      </div>
     </div>
   )
 }
