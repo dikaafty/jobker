@@ -107,7 +107,8 @@
 }
 
 @utility filter-category-select {
-  @apply w-35 bg-secondary outline-none pl-3.5 py-2 rounded-sm text-sm font-jost appearance-none;
+  @apply w-35 bg-secondary outline-none pl-3.5 py-2 rounded-sm text-sm font-jost appearance-none
+  border-1 border-muted;
 }
 
 .filter-category-select-wrapper::after {
