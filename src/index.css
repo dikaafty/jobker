@@ -109,3 +109,12 @@
 @utility filter-category-select {
   @apply w-35 bg-secondary outline-none pl-3.5 py-2 rounded-sm text-sm font-jost appearance-none;
 }
+
+.filter-category-select-wrapper::after {
+  content: "⪢";
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(90deg);
+}
