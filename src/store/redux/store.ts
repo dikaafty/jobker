@@ -6,3 +6,5 @@ export const store = configureStore({
     jobTracker: jobTrackerReducer,
   }
 });
+
+export type RootState = ReturnType<typeof store.getState>;
