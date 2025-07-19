@@ -5,6 +5,8 @@ import {
 } from "@/features/user/jobTrackerSlice";
 
 const Dialog = () => {
+  const jobTrackerStore = useAppSelector(state => state.jobTracker);
+
   return (
     <div>
       
