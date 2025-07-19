@@ -13,8 +13,6 @@ const filterCategories: FilterCategoriesInterface[] = [
 
 
 const JobTrackerPage = () => {
-  const [ filterJobCategories, setFilterJobCategories ] = useState<FilterCategoriesInterface[]>(filterCategories);
-
   return (
     <>
       <FilterCategoriesButton filterCategories={filterJobCategories} />
