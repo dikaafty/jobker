@@ -1,4 +1,3 @@
-import { type FilterCategoriesInterface } from "@/interfaces/filterCategories";
 import { cn } from "@/lib/utils";
 
 interface FilterCategoriesButtonProps {
