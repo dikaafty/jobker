@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { useSelector } from "react-redux";
 
 const FilterCategoriesButton = () => {
   return (
