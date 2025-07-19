@@ -6,6 +6,7 @@ const JobTrackerPage = () => {
   return (
     <>
       <FilterCategoriesButton />
+      <AddJobButton />
     </>
   )
 }
