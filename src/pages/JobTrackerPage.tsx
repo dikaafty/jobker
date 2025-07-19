@@ -1,5 +1,5 @@
 import FilterCategoriesButton from "@/components/jobTrackerPage/FilterCategoriesButton";
-import AddJobButton from "@/components/AddJobButton";
+import AddJobButton from "@/components/jobTrackerPage/AddJobButton";
 import { useState } from "react";
 
 const JobTrackerPage = () => {
