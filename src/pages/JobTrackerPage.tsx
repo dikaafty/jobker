@@ -1,4 +1,4 @@
-import FilterCategoriesButton from "@/components/FilterCategoriesButton";
+import FilterCategoriesButton from "@/components/jobTrackerPage/FilterCategoriesButton";
 import AddJobButton from "@/components/AddJobButton";
 import { useState } from "react";
 
