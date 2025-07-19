@@ -1,4 +1,5 @@
 import { setIsOpen } from "@/features/user/jobTrackerSlice";
+import { useAppDispatch } from "@/store/redux/hooks";
 
 const AddJobButton = () => {
   return (
