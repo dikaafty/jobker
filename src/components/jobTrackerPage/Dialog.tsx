@@ -6,6 +6,7 @@ import {
 
 const Dialog = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
+  const dispatch = useAppDispatch();
 
   return (
     <div>
