@@ -1,9 +1,5 @@
 import { cn } from "@/lib/utils";
 
-interface FilterCategoriesButtonProps {
-  filterCategories: FilterCategoriesInterface[],
-}
-
 const FilterCategoriesButton = ({ filterCategories }: FilterCategoriesButtonProps) => {
   return (
     <div>
