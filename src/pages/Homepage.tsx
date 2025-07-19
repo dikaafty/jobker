@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/homepage/HeroSection";
 
 const Homepage = () => {
   return (
