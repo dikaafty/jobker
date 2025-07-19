@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-const FilterCategoriesButton = ({ filterCategories }: FilterCategoriesButtonProps) => {
+const FilterCategoriesButton = () => {
   return (
     <div>
       {/* Desktop filter categories */}
