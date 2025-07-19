@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const Dialog = () => {
   return (
     <div>
