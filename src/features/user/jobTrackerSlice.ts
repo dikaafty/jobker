@@ -18,7 +18,7 @@ const jobTrackerSlice = createSlice({
     jobLocation: "",
     jobDescription: "",
     companyName: "",
-    isOpen: false
+    isOpen: true
   },
   reducers: {
     setfilterCategories: (state, action) => {
