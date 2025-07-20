@@ -111,6 +111,10 @@
   border-1 border-muted;
 }
 
+@utility dialog-label {
+  @apply text-xs sm:text-sm font-medium;
+}
+
 .filter-category-select > option:checked {
   background-color: hsl(var(--secondary-foreground));
   color: hsl(var(--secondary));
