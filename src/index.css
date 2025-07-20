@@ -111,6 +111,10 @@
   border-1 border-muted;
 }
 
+@utility form-wrapper {
+  @apply flex flex-col justify-center gap-2.5;
+}
+
 @utility dialog-label {
   @apply text-xs sm:text-sm font-medium;
 }
