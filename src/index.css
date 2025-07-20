@@ -15,7 +15,7 @@
   --color-secondary-foreground: hsl(var(--secondary-foreground));
   --color-muted: hsl(var(--muted));
 
-  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-fade-in: fade-in 0.3s ease-out forwards;
   --animate-fade-in-delay: fade-in 1s ease-out 0.5s forwards;
   --animate-text-fire: text-fire ease-in-out 0.4s infinite; 
 
