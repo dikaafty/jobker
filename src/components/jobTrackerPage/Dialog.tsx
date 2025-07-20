@@ -9,9 +9,100 @@ const Dialog = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div>
-      
-    </div>
+    jobTrackerStore.isOpen && (
+      <div 
+        className="w-screen h-screen fixed top-0 left-0 backdrop-blur-xs flex justify-center items-center z-60
+        animate-fade-in"
+      >
+        <div
+          className="w-[90%] sm:w-106 bg-background px-5 pt-4 pb-5.5 border-1 border-muted rounded-xl font-jost
+          animate-scale-up"
+        >
+          <h1 className="text-lg font-bold max-sm:text-center">
+            Add new job
+          </h1>
+          <div className="flex flex-col gap-4 my-2.5">
+            <div className="form-wrapper">
+              <label
+                htmlFor="job-title"
+                className="dialog-label"
+              >
+                Job Title
+              </label>
+              <input
+                type="text"
+                id="job-title"
+                className="dialog-input"
+              />
+            </div>
+            <div className="form-wrapper">
+              <label
+                htmlFor="job-url"
+                className="dialog-label"
+              >
+                Job Url
+              </label>
+              <input
+                type="url"
+                id="job-url"
+                className="dialog-input"
+              />
+            </div>
+            <div className="form-wrapper">
+              <label
+                htmlFor="job-location"
+                className="dialog-label"
+              >
+                Job Location
+              </label>
+              <input
+                type="text"
+                id="job-location"
+                className="dialog-input"
+              />
+            </div>
+            <div className="form-wrapper">
+              <label
+                htmlFor="job-description"
+                className="dialog-label"
+              >
+                Job Description
+              </label>
+              <input
+                type="text"
+                id="job-description"
+                className="dialog-input"
+              />
+            </div>
+            <div className="form-wrapper">
+              <label
+                htmlFor="company-name"
+                className="dialog-label"
+              >
+                Company Name
+              </label>
+              <input
+                type="text"
+                id="company-name"
+                className="dialog-input"
+              />
+            </div>
+          </div>
+          <div className="flex max-sm:flex-col-reverse justify-end gap-2 mt-4">
+            <button 
+              className="secondary-button py-2 sm:py-1.5 rounded-lg"
+            >
+              Cancel
+            </button>
+            <button 
+              className="primary-button py-2 sm:py-1.5 rounded-lg"
+            >
+              Save Job
+            </button>
+          </div>
+        </div>
+      </div>
+    )
   )
 }
 
