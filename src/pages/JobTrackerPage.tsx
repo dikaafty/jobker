@@ -10,6 +10,7 @@ const JobTrackerPage = () => {
       <FilterCategoriesButton />
       <AddJobButton />
       <Dialog />
+      <JobTable />
     </>
   )
 }
