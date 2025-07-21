@@ -11,7 +11,7 @@ const jobTrackerSlice = createSlice({
       { category: "NEGOTIATING", numberOfItems: 0 },
       { category: "ACCEPTED", numberOfItems: 0 },
     ],
-    job: [],
+    jobs: [],
     selectedJob: null,
     editedJob: null,
     jobTitle: "",
