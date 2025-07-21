@@ -91,6 +91,7 @@ const Dialog = () => {
           <div className="flex max-sm:flex-col-reverse justify-end gap-2 mt-4">
             <button 
               className="secondary-button py-2 sm:py-1.5 rounded-lg"
+              onClick={}
             >
               Cancel
             </button>
