@@ -35,6 +35,7 @@ const Dialog = () => {
                 className="dialog-input"
               />
             </div>
+
             <div className="form-wrapper">
               <label
                 htmlFor="job-url"
@@ -48,6 +49,7 @@ const Dialog = () => {
                 className="dialog-input"
               />
             </div>
+
             <div className="form-wrapper">
               <label
                 htmlFor="job-location"
@@ -61,19 +63,7 @@ const Dialog = () => {
                 className="dialog-input"
               />
             </div>
-            <div className="form-wrapper">
-              <label
-                htmlFor="job-description"
-                className="dialog-label"
-              >
-                Job Description
-              </label>
-              <input
-                type="text"
-                id="job-description"
-                className="dialog-input"
-              />
-            </div>
+
             <div className="form-wrapper">
               <label
                 htmlFor="company-name"
@@ -84,6 +74,20 @@ const Dialog = () => {
               <input
                 type="text"
                 id="company-name"
+                className="dialog-input"
+              />
+            </div>
+
+            <div className="form-wrapper">
+              <label
+                htmlFor="job-description"
+                className="dialog-label"
+              >
+                Job Description
+              </label>
+              <input
+                type="text"
+                id="job-description"
                 className="dialog-input"
               />
             </div>
