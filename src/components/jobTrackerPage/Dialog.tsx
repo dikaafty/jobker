@@ -50,6 +50,8 @@ const Dialog = () => {
                 type="url"
                 id="job-url"
                 className="dialog-input"
+                value={jobTrackerStore.jobUrl}
+                onChange={(e) => dispatch(setJobUrl((e.target as HTMLInputElement).value))}
               />
             </div>
 
