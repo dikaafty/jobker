@@ -94,9 +94,9 @@
 }
 
 @utility text-fire {
-  @apply transition-colors duration-300 relative hover:text-cyan-300 before:absolute before:-top-1/2 
+  @apply transition-colors duration-300 relative hover:text-background before:absolute before:-top-1/2 
   before:right-1/2 before:text-2xl sm:before:text-4xl md:before:text-5xl before:translate-1/2 
-  before:animate-text-fire before:text-cyan-400 before:transition-all before:duration-300 
+  before:animate-text-fire before:text-foreground before:transition-all before:duration-300 
   before:whitespace-nowrap before:blur-xl hover:before:blur-2xl;
 }
 
