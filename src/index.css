@@ -166,3 +166,8 @@ input:-webkit-autofill:active {
 
   -webkit-text-stroke: 2px hsl(var(--foreground));
 }
+
+.scrollbar-style {
+  scrollbar-color: hsl(var(--foreground)) hsl(var(--background));
+  scrollbar-width: medium;
+}
