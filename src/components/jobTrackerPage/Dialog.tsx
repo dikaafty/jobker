@@ -97,6 +97,8 @@ const Dialog = () => {
               <textarea
                 id="job-description"
                 className="dialog-input h-40"
+                value={jobTrackerStore.jobDescription}
+                onChange={(e) => dispatch(setJobDescription((e.target as HTMLTextAreaElement).value))}
               />
             </div>
           </div>
