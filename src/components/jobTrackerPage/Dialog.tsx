@@ -12,7 +12,7 @@ const Dialog = () => {
     jobTrackerStore.isOpen && (
       <div 
         className="w-screen h-screen fixed top-0 left-0 backdrop-blur-xs flex justify-center items-start z-60
-        animate-fade-in overflow-y-auto py-7"
+        animate-fade-in overflow-y-auto py-7 scrollbar-style"
       >
         <div
           className="w-[90%] sm:w-106 bg-background px-5 pt-4 pb-5.5 border-1 border-muted rounded-xl font-jost
