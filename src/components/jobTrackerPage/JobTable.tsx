@@ -4,7 +4,7 @@ const JobTable = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
 
   return (
-    <div>
+    <div className="max-md:pl-4 flex md:justify-center">
       
     </div>
   )
