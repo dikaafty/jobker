@@ -115,6 +115,7 @@ const Dialog = () => {
               className="secondary-button py-2 sm:py-1.5 rounded-lg"
               onClick={() => {
                 dispatch(setIsOpen());
+                resetJobStatesValue();
               }}
             >
               Cancel
