@@ -82,6 +82,8 @@ const Dialog = () => {
                 type="text"
                 id="company-name"
                 className="dialog-input"
+                value={jobTrackerStore.companyName}
+                onChange={(e) => dispatch(setCompanyName((e.target as HTMLInputElement).value))}
               />
             </div>
 
