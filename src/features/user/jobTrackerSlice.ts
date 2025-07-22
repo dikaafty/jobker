@@ -69,7 +69,7 @@ const jobTrackerSlice = createSlice({
 
 export const {
   setfilterCategories, setSelectedJob, setEditedJob, setJobTitle, setJobUrl,
-  setJobLocation, setJobDescription, setCompanyName, setIsOpen
+  setJobLocation, setJobDescription, setCompanyName, setIsOpen, addJob
 } = jobTrackerSlice.actions;
 
 export default jobTrackerSlice.reducer;
