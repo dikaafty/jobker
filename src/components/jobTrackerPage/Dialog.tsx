@@ -85,10 +85,9 @@ const Dialog = () => {
               >
                 Job Description
               </label>
-              <input
-                type="text"
+              <textarea
                 id="job-description"
-                className="dialog-input"
+                className="dialog-input h-40"
               />
             </div>
           </div>
