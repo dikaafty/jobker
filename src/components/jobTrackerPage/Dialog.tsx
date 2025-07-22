@@ -17,6 +17,16 @@ const Dialog = () => {
     dispatch(setJobDescription(""));
   }
 
+  const newJob = {
+    jobTitle: jobTrackerStore.jobTitle,
+    jobUrl: jobTrackerStore.jobUrl,
+    jobLocation: jobTrackerStore.jobLocation,
+    companyName: jobTrackerStore.companyName,
+    jobDescription: jobTrackerStore.jobDescription,
+    status: "Bookmarked",
+    dateSaved: new Date().toLocaleDateString("en-GB"),
+  }
+
   return (
     jobTrackerStore.isOpen && (
       <div 
