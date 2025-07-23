@@ -10,7 +10,7 @@ const FilterCategoriesButton = () => {
 
       <div className="w-full hidden md:flex justify-center items-center gap-4 lg:gap-8 px-10 pt-5">
         {
-          filterCategories.map((filterCategory) => (
+          jobTrackerStore.filterCategories.map((filterCategory) => (
             <div 
               className={cn(
                 "filter-category-button border-1 transition-colors duration-300",
