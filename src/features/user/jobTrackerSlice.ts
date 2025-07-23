@@ -88,6 +88,9 @@ const jobTrackerSlice = createSlice({
     setIsOpen: (state) => {
       state.isOpen = !state.isOpen;
     },
+    setNumberOfItemsCategory: (state, action) => {
+      state.filterCategories[action.payload[0]].numberOfItems = action.payload[1];
+    }
   }
 });
 
