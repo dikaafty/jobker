@@ -9,7 +9,7 @@ const Dialog = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
 
-  const resetJobStatesValue = () => {
+  const resetJobStatesValue = (): void => {
     dispatch(setJobTitle(""));
     dispatch(setJobUrl(""));
     dispatch(setJobLocation(""));
