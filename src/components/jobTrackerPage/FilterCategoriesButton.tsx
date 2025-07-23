@@ -5,6 +5,7 @@ import { setNumberOfItemsCategory } from "@/features/user/jobTrackerSlice";
 
 const FilterCategoriesButton = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
+  const dispatch = useAppDispatch();
 
   return (
     <div>
