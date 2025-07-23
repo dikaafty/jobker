@@ -25,6 +25,9 @@ const jobTrackerSlice = createSlice({
     setfilterCategories: (state, action) => {
       state.filterCategories = action.payload;
     },
+    setJobs: (state, action) => {
+      state.jobs = action.payload;
+    },
     addJob: (state, action) => {
       state.jobs.push(action.payload);
     },
