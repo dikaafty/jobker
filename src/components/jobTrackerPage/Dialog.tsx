@@ -27,7 +27,15 @@ const Dialog = () => {
     status: "Bookmarked",
     dateSaved: new Date().toLocaleDateString("en-GB"),
   }
-  
+
+  useEffect(() => {
+    const savedJobs = localStorage.getItem("jobs");
+
+    if(savedJobs) dispatch(setJobs(JSON.parse(savedJobs)));
+
+    setLoaded(true);
+  }, []);
+
   return (
     jobTrackerStore.isOpen && (
       <div 
