@@ -7,6 +7,26 @@ const FilterCategoriesButton = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
 
+  useEffect(() => {
+    const countStatus = jobTrackerStore.jobs.reduce((res: { [key: string]: number }, job) => {
+      if(!res[job.status]) {
+        res[job.status] = 1;
+      } else {
+        res[job.status] = res[job.status] + 1;
+      }
+
+      return res;
+    }, {});
+
+    for (const key in countStatus) {
+      jobTrackerStore.filterCategories.forEach((filterCategory, idx) => {
+        if(key.toLowerCase() === filterCategory.category.toLowerCase()) {
+          dispatch(setNumberOfItemsCategory([idx, countStatus[key]]));
+        }
+      });
+    }
+  }, [jobTrackerStore.jobs]);
+
   return (
     <div>
       {/* Desktop filter categories */}
