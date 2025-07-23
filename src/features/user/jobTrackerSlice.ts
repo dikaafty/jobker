@@ -30,6 +30,27 @@ type InitialState = {
   isOpen: boolean,
 }
 
+
+const initialState: InitialState = {
+  filterCategories: [
+    { category: "BOOKMARKED", numberOfItems: 0 },
+    { category: "APPLYING", numberOfItems: 0 },
+    { category: "APPLIED", numberOfItems: 0 },
+    { category: "INTERVIEWING", numberOfItems: 0 },
+    { category: "NEGOTIATING", numberOfItems: 0 },
+    { category: "ACCEPTED", numberOfItems: 0 },
+  ],
+  jobs: [],
+  selectedJob: null,
+  editedJob: null,
+  jobTitle: "",
+  jobUrl: "",
+  jobLocation: "",
+  jobDescription: "",
+  companyName: "",
+  isOpen: false
+}
+
 const jobTrackerSlice = createSlice({
   name: "jobTracker",
   initialState: {
