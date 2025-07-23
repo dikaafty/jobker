@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { useAppSelector } from "@/store/redux/hooks";
 
 const FilterCategoriesButton = () => {
-  const filterCategories = useAppSelector(state => state.jobTracker.filterCategories);
+  const jobTrackerStore = useAppSelector(state => state.jobTracker);
 
   return (
     <div>
