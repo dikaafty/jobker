@@ -8,6 +8,7 @@ import {
 const Dialog = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
+  const [ loaded, setLoaded ] = useState(false);
 
   const resetJobStatesValue = (): void => {
     dispatch(setJobTitle(""));
@@ -26,7 +27,7 @@ const Dialog = () => {
     status: "Bookmarked",
     dateSaved: new Date().toLocaleDateString("en-GB"),
   }
-
+  
   return (
     jobTrackerStore.isOpen && (
       <div 
