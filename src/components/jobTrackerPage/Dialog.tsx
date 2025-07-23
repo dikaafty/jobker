@@ -106,6 +106,12 @@ const Dialog = () => {
                 className="dialog-label"
               >
                 Job Location
+                <span 
+                  className="text-xs sm:text-sm text-red-800 ml-1" 
+                  title="required field sign"
+                >
+                  *
+                </span>
               </label>
               <input
                 type="text"
