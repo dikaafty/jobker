@@ -1,5 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+type FilterCategory = {
+  category: string,
+  numberOfItems: string
+}
+
 const jobTrackerSlice = createSlice({
   name: "jobTracker",
   initialState: {
