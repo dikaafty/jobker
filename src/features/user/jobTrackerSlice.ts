@@ -17,6 +17,18 @@ type Job = {
   deadline?: string
 }
 
+type InitialState = {
+  filterCategories: FilterCategory[],
+  jobs: Job[],
+  selectedJob: Job | null,
+  editedJob: Job | null,
+  jobTitle: string,
+  jobLocation: string,
+  companyName: string,
+  jobDescription: string,
+  isOpen: boolean,
+}
+
 const jobTrackerSlice = createSlice({
   name: "jobTracker",
   initialState: {
