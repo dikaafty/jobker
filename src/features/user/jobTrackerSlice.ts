@@ -23,6 +23,7 @@ type InitialState = {
   selectedJob: Job | null,
   editedJob: Job | null,
   jobTitle: string,
+  jobUrl: string,
   jobLocation: string,
   companyName: string,
   jobDescription: string,
