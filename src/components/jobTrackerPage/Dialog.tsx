@@ -148,9 +148,14 @@ const Dialog = () => {
             <button 
               className="primary-button py-2 sm:py-1.5 rounded-lg"
               onClick={() => {
-                dispatch(addJob(newJob));
-                resetJobStatesValue();
-                dispatch(setIsOpen());
+                if(
+                  jobTrackerStore.jobTitle && jobTrackerStore.jobUrl &&
+                  jobTrackerStore.jobLocation && jobTrackerStore.companyName
+                ) {
+                  dispatch(addJob(newJob));
+                  resetJobStatesValue();
+                  dispatch(setIsOpen());
+                }
               }}
             >
               Save Job
