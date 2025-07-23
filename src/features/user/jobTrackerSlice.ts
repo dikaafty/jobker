@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 type FilterCategory = {
   category: string,
-  numberOfItems: string
+  numberOfItems: number
 }
 
 type Job = {
