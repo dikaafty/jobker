@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
 import { useEffect } from "react";
+import { setNumberOfItemsCategory } from "@/features/user/jobTrackerSlice";
 
 const FilterCategoriesButton = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
