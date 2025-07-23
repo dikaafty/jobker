@@ -132,6 +132,14 @@ const Dialog = () => {
             </button>
             <button 
               className="primary-button py-2 sm:py-1.5 rounded-lg"
+              onClick={() => {
+                dispatch(addJob(newJob));
+
+                localStorage.setItem("jobs", JSON.stringify(newJob));
+
+                resetJobStatesValue();
+                dispatch(setIsOpen());
+              }}
             >
               Save Job
             </button>
