@@ -5,6 +5,18 @@ type FilterCategory = {
   numberOfItems: string
 }
 
+type Job = {
+  jobTitle: string,
+  jobUrl: string,
+  jobLocation: string,
+  companyName: string,
+  jobDescription: string,
+  status: string,
+  dateSaved: string,
+  dateApplied?: string,
+  deadline?: string
+}
+
 const jobTrackerSlice = createSlice({
   name: "jobTracker",
   initialState: {
