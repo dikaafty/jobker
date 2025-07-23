@@ -36,6 +36,12 @@ const Dialog = () => {
     setLoaded(true);
   }, []);
 
+  useEffect(() => {
+    if(!loaded) return;
+
+    localStorage.setItem("jobs", JSON.stringify(jobTrackerStore.jobs));
+  }, [jobTrackerStore.jobs]);
+
   return (
     jobTrackerStore.isOpen && (
       <div 
