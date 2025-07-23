@@ -53,25 +53,7 @@ const initialState: InitialState = {
 
 const jobTrackerSlice = createSlice({
   name: "jobTracker",
-  initialState: {
-    filterCategories: [
-      { category: "BOOKMARKED", numberOfItems: 0 },
-      { category: "APPLYING", numberOfItems: 0 },
-      { category: "APPLIED", numberOfItems: 0 },
-      { category: "INTERVIEWING", numberOfItems: 0 },
-      { category: "NEGOTIATING", numberOfItems: 0 },
-      { category: "ACCEPTED", numberOfItems: 0 },
-    ],
-    jobs: [],
-    selectedJob: null,
-    editedJob: null,
-    jobTitle: "",
-    jobUrl: "",
-    jobLocation: "",
-    jobDescription: "",
-    companyName: "",
-    isOpen: false
-  },
+  initialState,
   reducers: {
     setfilterCategories: (state, action) => {
       state.filterCategories = action.payload;
