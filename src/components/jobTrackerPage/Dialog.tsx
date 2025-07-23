@@ -135,7 +135,7 @@ const Dialog = () => {
               onClick={() => {
                 dispatch(addJob(newJob));
 
-                localStorage.setItem("jobs", JSON.stringify(newJob));
+                localStorage.setItem("jobs", JSON.stringify(jobTrackerStore.jobs));
 
                 resetJobStatesValue();
                 dispatch(setIsOpen());
