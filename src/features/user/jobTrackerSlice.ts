@@ -11,19 +11,7 @@ const jobTrackerSlice = createSlice({
       { category: "NEGOTIATING", numberOfItems: 0 },
       { category: "ACCEPTED", numberOfItems: 0 },
     ],
-    jobs: [
-      {
-        jobTitle: "Front-end Developer",
-        jobUrl: "https://wellfound.com/role/r/front-end-developer",
-        jobLocation: "Vienna, Austria",
-        jobDescription: "",
-        companyName: "Joro Comp.",
-        status: "Bookmarked",
-        dateSaved: new Date().toLocaleDateString("en-GB"),
-        dateApplied: new Date().toLocaleDateString("en-GB"),
-        deadline: ""
-      }
-    ],
+    jobs: [],
     selectedJob: null,
     editedJob: null,
     jobTitle: "",
