@@ -104,6 +104,13 @@
   @apply transition-transform duration-300 hover:scale-110;
 }
 
+@utility button-container-w-animation {
+  @apply flex justify-between items-center rounded-xl relative before:content-['']
+  before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-primary-foreground
+  before:-z-10 before:rounded-xl before:border-1 before:border-primary hover:before:top-0.5
+  hover:before:left-0.5 before:transition-all before:duration-300;
+}
+
 @utility primary-button {
   @apply px-5.5 sm:px-6 py-2.5 bg-primary text-primary-foreground font-jost font-medium text-xs 
   sm:text-sm rounded-xl cursor-pointer transition-colors duration-300;
