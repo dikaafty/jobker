@@ -17,6 +17,9 @@ const Dialog = () => {
     dispatch(setJobLocation(""));
     dispatch(setCompanyName(""));
     dispatch(setJobDescription(""));
+    dispatch(setStatus("Bookmarked"));
+    dispatch(setDateApplied(""));
+    dispatch(setDeadline(""));
   }
 
   const newJob = {
