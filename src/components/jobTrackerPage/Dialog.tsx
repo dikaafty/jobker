@@ -202,6 +202,22 @@ const Dialog = () => {
 
             <div className="form-wrapper">
               <label
+                htmlFor="deadline"
+                className="dialog-label"
+              >
+                Deadline
+              </label>
+              <input
+                type="date"
+                id="deadline"
+                className="dialog-input"
+                value={jobTrackerStore.deadline}
+                onChange={(e) => dispatch(setDeadline((e.target as HTMLInputElement).value))}
+              />
+            </div>
+
+            <div className="form-wrapper">
+              <label
                 htmlFor="job-description"
                 className="dialog-label"
               >
