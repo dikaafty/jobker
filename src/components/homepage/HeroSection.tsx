@@ -26,12 +26,14 @@ const HeroSection = () => {
           </NavLink>
         </div>
 
-        <NavLink
-          to="/about"
-          className="secondary-button"
-        >
-          About Us
-        </NavLink>
+        <div className="button-container-w-animation">
+          <NavLink
+            to="/about"
+            className="secondary-button"
+          >
+            About Us
+          </NavLink>
+        </div>
       </div>
     </section>
   )
