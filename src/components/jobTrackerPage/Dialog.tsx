@@ -147,6 +147,39 @@ const Dialog = () => {
 
             <div className="form-wrapper">
               <label
+                htmlFor="status"
+                className="dialog-label"
+              >
+                Status
+                <span 
+                  className="text-xs sm:text-sm text-red-800 ml-1" 
+                  title="required field sign"
+                >
+                  *
+                </span>
+              </label>
+              <div className="relative filter-category-select-wrapper">
+                <select
+                  id="status"
+                  className="dialog-select w-full"
+                  onChange={(e) => dispatch(setStatus(e.target.value))}
+                >
+                  {
+                    jobTrackerStore.filterCategories.map(filterCategory => (
+                      <option
+                        value={capitalize(filterCategory.category)}
+                        key={filterCategory.category}
+                      >
+                        {capitalize(filterCategory.category)}
+                      </option>
+                    ))
+                  }
+                </select>
+              </div>
+            </div>
+
+            <div className="form-wrapper">
+              <label
                 htmlFor="job-description"
                 className="dialog-label"
               >
