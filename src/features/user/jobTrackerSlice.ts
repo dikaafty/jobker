@@ -52,6 +52,7 @@ const initialState: InitialState = {
   jobDescription: "",
   companyName: "",
   status: "Bookmarked",
+  dateApplied: "",
   isOpen: false
 }
 
