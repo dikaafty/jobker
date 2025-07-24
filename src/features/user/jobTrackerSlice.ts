@@ -28,6 +28,7 @@ type InitialState = {
   companyName: string,
   jobDescription: string,
   status: string,
+  dateApplied: string,
   isOpen: boolean,
 }
 
