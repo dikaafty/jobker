@@ -94,6 +94,9 @@ const jobTrackerSlice = createSlice({
     setStatus: (state, action) => {
       state.status = action.payload;
     },
+    setDateApplied: (state, action) => {
+      state.dateApplied = action.payload;
+    },
     setIsOpen: (state) => {
       state.isOpen = !state.isOpen;
     },
