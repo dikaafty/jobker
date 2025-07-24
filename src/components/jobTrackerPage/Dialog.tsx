@@ -180,6 +180,22 @@ const Dialog = () => {
 
             <div className="form-wrapper">
               <label
+                htmlFor="date-applied"
+                className="dialog-label"
+              >
+                Date Applied
+              </label>
+              <input
+                type="date"
+                id="date-applied"
+                className="dialog-input"
+                value={jobTrackerStore.dateApplied}
+                onChange={(e) => dispatch(setDateApplied((e.target as HTMLInputElement).value))}
+              />
+            </div>
+
+            <div className="form-wrapper">
+              <label
                 htmlFor="job-description"
                 className="dialog-label"
               >
