@@ -4,6 +4,7 @@ import {
   setJobTitle, setJobUrl, setJobLocation, setJobDescription, setCompanyName, 
   setIsOpen, addJob, setJobs, setStatus, setDateApplied, setDeadline
 } from "@/features/user/jobTrackerSlice";
+import { capitalize } from "@/lib/utils";
 
 const Dialog = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
