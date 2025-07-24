@@ -29,6 +29,7 @@ type InitialState = {
   jobDescription: string,
   status: string,
   dateApplied: string,
+  deadline: string,
   isOpen: boolean,
 }
 
