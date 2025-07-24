@@ -91,6 +91,9 @@ const jobTrackerSlice = createSlice({
     setCompanyName: (state, action) => {
       state.companyName = action.payload;
     },
+    setStatus: (state, action) => {
+      state.status = action.payload;
+    },
     setIsOpen: (state) => {
       state.isOpen = !state.isOpen;
     },
