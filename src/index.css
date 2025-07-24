@@ -145,7 +145,7 @@
 
 @utility dialog-select {
   @apply px-3 py-1.5 border-1 border-muted rounded-lg text-xs sm:text-sm transition-all 
-  duration-500 focus:shadow-[0_0_0_2px_hsl(var(--primary))] bg-background;
+  duration-500 focus:shadow-[0_0_0_2px_hsl(var(--primary))] bg-background appearance-none;
 }
 
 .filter-category-select > option:checked,
