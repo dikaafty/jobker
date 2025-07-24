@@ -33,3 +33,7 @@ export const runObserver = (...refs: React.RefObject<HTMLElement>[]): () => void
 
   return () => observer.disconnect();
 }
+
+const capitalize = (str: string): string => {
+  return str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+}
