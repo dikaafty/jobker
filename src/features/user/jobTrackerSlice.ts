@@ -53,6 +53,7 @@ const initialState: InitialState = {
   companyName: "",
   status: "Bookmarked",
   dateApplied: "",
+  deadline: "",
   isOpen: false
 }
 
