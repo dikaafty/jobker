@@ -26,7 +26,7 @@ const HeroSection = () => {
           </NavLink>
         </div>
 
-        <div className="button-container-w-animation">
+        <div className="button-container-w-animation before:opacity-0 hover:before:opacity-100">
           <NavLink
             to="/about"
             className="secondary-button active:translate-x-0.5 active:translate-y-0.5 transition-transform
