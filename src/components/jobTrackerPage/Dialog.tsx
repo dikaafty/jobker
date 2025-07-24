@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/redux/hooks";
 import {
   setJobTitle, setJobUrl, setJobLocation, setJobDescription, setCompanyName, 
-  setIsOpen, addJob, setJobs
+  setIsOpen, addJob, setJobs, setStatus, setDateApplied, setDeadline
 } from "@/features/user/jobTrackerSlice";
 
 const Dialog = () => {
