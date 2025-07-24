@@ -29,7 +29,8 @@ const HeroSection = () => {
         <div className="button-container-w-animation">
           <NavLink
             to="/about"
-            className="secondary-button"
+            className="secondary-button active:translate-x-0.5 active:translate-y-0.5 transition-transform
+              duration-300 hover:-translate-0.5 active:opacity-95"
           >
             About Us
           </NavLink>
