@@ -61,6 +61,28 @@ const Dialog = () => {
     localStorage.setItem("jobs", JSON.stringify(jobTrackerStore.jobs));
   }, [jobTrackerStore.jobs]);
 
+  useEffect(() => {
+    if(jobTrackerStore.selectedJob) {
+      dispatch(setJobTitle(jobTrackerStore.selectedJob.jobTitle));
+      dispatch(setJobUrl(jobTrackerStore.selectedJob.jobUrl));
+      dispatch(setJobLocation(jobTrackerStore.selectedJob.jobLocation));
+      dispatch(setCompanyName(jobTrackerStore.selectedJob.companyName));
+      dispatch(setStatus(jobTrackerStore.selectedJob.status));
+      dispatch(setDateApplied(jobTrackerStore.selectedJob.dateApplied));
+      dispatch(setDeadline(jobTrackerStore.selectedJob.deadline));
+      dispatch(setJobDescription(jobTrackerStore.selectedJob.jobDescription));
+    } else {
+      dispatch(setJobTitle(""));
+      dispatch(setJobUrl(""));
+      dispatch(setJobLocation(""));
+      dispatch(setCompanyName(""));
+      dispatch(setStatus("Bookmarked"));
+      dispatch(setDateApplied(""));
+      dispatch(setDeadline(""));
+      dispatch(setJobDescription(""));
+    }
+  }, [jobTrackerStore.isOpen]);
+
   return (
     jobTrackerStore.isOpen && (
       <div 
