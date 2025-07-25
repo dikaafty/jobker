@@ -28,7 +28,7 @@ const Dialog = () => {
     jobLocation: jobTrackerStore.jobLocation,
     companyName: jobTrackerStore.companyName,
     jobDescription: jobTrackerStore.jobDescription,
-    status: "Bookmarked",
+    status: jobTrackerStore.status,
     dateSaved: new Date().toLocaleDateString("en-GB"),
   }
 
