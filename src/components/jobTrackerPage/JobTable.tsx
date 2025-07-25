@@ -84,7 +84,7 @@ const JobTable = () => {
         <thead>
           <tr className="bg-card font-semibold text-sm">
             <td className="pl-5 py-3 border-b border-primary"></td>
-            <td className="pl-5 py-3 border-b border-primary">Job Position</td>
+            <td className="py-3 border-b border-primary">Job Position</td>
             <td className="py-3 border-b border-primary">Status</td>
           </tr>
         </thead>
