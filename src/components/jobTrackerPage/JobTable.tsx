@@ -31,7 +31,7 @@ const JobTable = () => {
           jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
               <tr className="text-sm">
                 <td className="pl-5 py-3"><SquarePen size={16} /></td>
-                <td className="pl-5 py-3">{job.jobTitle}</td>
+                <td className="px-6 py-3">{job.jobTitle}</td>
                 <td className="px-6 py-3">{job.companyName}</td>
                 <td className="px-6 py-3">{job.jobLocation}</td>
                 <td className="px-6 py-3">{job.status}</td>
