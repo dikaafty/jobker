@@ -39,6 +39,7 @@ const Dialog = () => {
   }
 
   const newJob: NewJob = {
+    id: id++,
     jobTitle: jobTrackerStore.jobTitle,
     jobUrl: jobTrackerStore.jobUrl,
     jobLocation: jobTrackerStore.jobLocation,
