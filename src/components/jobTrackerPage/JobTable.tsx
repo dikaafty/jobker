@@ -36,6 +36,10 @@ const JobTable = () => {
                   <SquarePen 
                     size={16} 
                     className="cursor-pointer"
+                    onClick={() => {
+                      dispatch(setIsOpen());
+                      dispatch(setSelectedJob(job));
+                    }}
                   />
                 </td>
                 <td className="px-6 py-3">{job.jobTitle}</td>
