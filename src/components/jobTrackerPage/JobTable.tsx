@@ -24,9 +24,9 @@ const JobTable = () => {
           </tr>
         </thead>
 
+        <tbody>
         {
           jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
-            <tbody key={job.companyName}>
               <tr className="text-sm">
                 <td className="pl-5 py-3 border-b border-primary">{job.jobTitle}</td>
                 <td className="px-6 py-3 border-b border-primary">{job.companyName}</td>
@@ -36,9 +36,9 @@ const JobTable = () => {
                 <td className="px-6 py-3 border-b border-primary">{job.dateApplied}</td>
                 <td className="pr-5 py-3 border-b border-primary">{job.deadline}</td>
               </tr>
-            </tbody>
           ))
         }
+        </tbody>
       </table>
 
       {/* Tablet Job Table */}
