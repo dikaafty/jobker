@@ -38,6 +38,15 @@ const Dialog = () => {
     dispatch(setSelectedJob(null));
   }
 
+  const getNewJobId = (): number => {
+    if(!jobTrackerStore.jobs || jobTrackerStore.jobs.length === 0) {
+      return 1;
+    }
+
+    const maxId = Math.max(...jobTrackerStore.jobs.map(job => Number(job.id)));
+    return maxId + 1;
+  }
+
   const newJob: NewJob = {
     id: id++,
     jobTitle: jobTrackerStore.jobTitle,
