@@ -1,4 +1,4 @@
-import { useAppSelector } from "@/store/redux/hooks";
+import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
 import { SquarePen } from "lucide-react";
 import { setIsOpen, setSelectedJob } from "@/features/user/jobTrackerSlice";
 
