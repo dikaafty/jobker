@@ -56,18 +56,18 @@ const JobTable = () => {
           </tr>
         </thead>
 
+        <tbody>
         {
           jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
-            <tbody key={job.companyName}>
-              <tr className="text-sm py-2">
-                <td className="pl-5 py-3 border-b border-primary">{job.jobTitle}</td>
-                <td className="py-3 border-b border-primary">{job.companyName}</td>
-                <td className="py-3 border-b border-primary">{job.jobLocation}</td>
-                <td className="py-3 border-b border-primary">{job.status}</td>
-              </tr>
-            </tbody>
+            <tr className="text-sm py-2">
+              <td className="pl-5 py-3 border-b border-primary">{job.jobTitle}</td>
+              <td className="py-3 border-b border-primary">{job.companyName}</td>
+              <td className="py-3 border-b border-primary">{job.jobLocation}</td>
+              <td className="py-3 border-b border-primary">{job.status}</td>
+            </tr>
           ))
         }
+        </tbody>
       </table>
 
       {/* Mobile Job Table */}
