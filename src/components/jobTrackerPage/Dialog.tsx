@@ -32,6 +32,7 @@ const Dialog = () => {
     dispatch(setStatus("Bookmarked"));
     dispatch(setDateApplied(""));
     dispatch(setDeadline(""));
+    dispatch(setSelectedJob(null));
   }
 
   const newJob: NewJob = {
