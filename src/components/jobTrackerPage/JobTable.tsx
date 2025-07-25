@@ -1,4 +1,5 @@
 import { useAppSelector } from "@/store/redux/hooks";
+import { SquarePen } from "lucide-react";
 
 const JobTable = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
