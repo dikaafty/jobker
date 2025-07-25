@@ -34,7 +34,7 @@ const Dialog = () => {
     dispatch(setDeadline(""));
   }
 
-  const newJob = {
+  const newJob: NewJob = {
     jobTitle: jobTrackerStore.jobTitle,
     jobUrl: jobTrackerStore.jobUrl,
     jobLocation: jobTrackerStore.jobLocation,
