@@ -30,6 +30,7 @@ const Dialog = () => {
     jobDescription: jobTrackerStore.jobDescription,
     status: jobTrackerStore.status,
     dateSaved: new Date().toLocaleDateString("en-GB"),
+    dateApplied: jobTrackerStore.dateApplied,
   }
 
   useEffect(() => {
