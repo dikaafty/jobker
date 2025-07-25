@@ -1,5 +1,6 @@
 import { useAppSelector } from "@/store/redux/hooks";
 import { SquarePen } from "lucide-react";
+import { setIsOpen, setSelectedJob } from "@/features/user/jobTrackerSlice";
 
 const JobTable = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
