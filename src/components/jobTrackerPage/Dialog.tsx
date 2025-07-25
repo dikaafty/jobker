@@ -202,6 +202,7 @@ const Dialog = () => {
                 <select
                   id="status"
                   className="dialog-select w-full"
+                  value={jobTrackerStore.selectedJob?.status}
                   onChange={(e) => dispatch(setStatus(e.target.value))}
                 >
                   {
