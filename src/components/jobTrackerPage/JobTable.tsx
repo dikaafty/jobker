@@ -28,13 +28,13 @@ const JobTable = () => {
         {
           jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
               <tr className="text-sm">
-                <td className="pl-5 py-3 border-b border-primary">{job.jobTitle}</td>
-                <td className="px-6 py-3 border-b border-primary">{job.companyName}</td>
-                <td className="px-6 py-3 border-b border-primary">{job.jobLocation}</td>
-                <td className="px-6 py-3 border-b border-primary">{job.status}</td>
-                <td className="px-6 py-3 border-b border-primary">{job.dateSaved}</td>
-                <td className="px-6 py-3 border-b border-primary">{job.dateApplied}</td>
-                <td className="pr-5 py-3 border-b border-primary">{job.deadline}</td>
+                <td className="pl-5 py-3">{job.jobTitle}</td>
+                <td className="px-6 py-3">{job.companyName}</td>
+                <td className="px-6 py-3">{job.jobLocation}</td>
+                <td className="px-6 py-3">{job.status}</td>
+                <td className="px-6 py-3">{job.dateSaved}</td>
+                <td className="px-6 py-3">{job.dateApplied}</td>
+                <td className="pr-5 py-3">{job.deadline}</td>
               </tr>
           ))
         }
