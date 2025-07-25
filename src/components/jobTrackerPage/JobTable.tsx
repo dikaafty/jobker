@@ -4,6 +4,7 @@ import { setIsOpen, setSelectedJob } from "@/features/user/jobTrackerSlice";
 
 const JobTable = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
+  const dispatch = useAppDispatch();
 
   return (
     <div className="max-md:pl-4 flex md:justify-center pb-10 px-5">
