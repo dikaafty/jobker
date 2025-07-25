@@ -6,6 +6,18 @@ import {
 } from "@/features/user/jobTrackerSlice";
 import { capitalize } from "@/lib/utils";
 
+type NewJob = {
+  jobTitle: string,
+  jobUrl: string,
+  jobLocation: string,
+  companyName: string,
+  jobDescription: string,
+  status: string,
+  dateSaved: string,
+  dateApplied: string,
+  deadline: string
+}
+
 const Dialog = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
