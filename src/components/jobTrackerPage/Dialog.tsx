@@ -7,6 +7,7 @@ import {
 import { capitalize } from "@/lib/utils";
 
 type NewJob = {
+  id: number,
   jobTitle: string,
   jobUrl: string,
   jobLocation: string,
