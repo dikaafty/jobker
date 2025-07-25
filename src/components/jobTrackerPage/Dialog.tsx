@@ -24,6 +24,8 @@ const Dialog = () => {
   const dispatch = useAppDispatch();
   const [ loaded, setLoaded ] = useState(false);
 
+  let id = 0;
+
   const resetJobStatesValue = (): void => {
     dispatch(setJobTitle(""));
     dispatch(setJobUrl(""));
