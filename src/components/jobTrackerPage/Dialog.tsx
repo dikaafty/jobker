@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/redux/hooks";
 import {
   setJobTitle, setJobUrl, setJobLocation, setJobDescription, setCompanyName, 
-  setIsOpen, addJob, setJobs, setStatus, setDateApplied, setDeadline
+  setIsOpen, addJob, setJobs, setStatus, setDateApplied, setDeadline, setSelectedJob
 } from "@/features/user/jobTrackerSlice";
 import { capitalize } from "@/lib/utils";
 
