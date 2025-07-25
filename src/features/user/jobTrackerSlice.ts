@@ -6,6 +6,7 @@ type FilterCategory = {
 }
 
 type Job = {
+  id: number,
   jobTitle: string,
   jobUrl: string,
   jobLocation: string,
