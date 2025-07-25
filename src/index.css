@@ -185,3 +185,7 @@ input:-webkit-autofill:active {
   scrollbar-color: hsl(var(--foreground)) hsl(var(--background));
   scrollbar-width: medium;
 }
+
+td {
+  border-bottom: 1px solid hsl(var(--primary));
+}
