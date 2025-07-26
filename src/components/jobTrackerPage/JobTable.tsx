@@ -6,6 +6,9 @@ const JobTable = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
 
+  const filteredJobs = jobTrackerStore.jobs
+  .filter(job => jobTrackerStore.activeCategory === "all" || job.status === jobTrackerStore.activeCategory);
+
   return (
     <div className="max-md:pl-4 flex md:justify-center pb-10 px-5">
 
