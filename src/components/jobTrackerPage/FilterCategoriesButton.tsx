@@ -55,6 +55,7 @@ const FilterCategoriesButton = () => {
               onClick={() => {
                 if(filterCategory.numberOfItems > 0) {
                   setIsFilteringIdx(prev => prev !== idx || !prev ? idx : null);
+                  dispatch(setActiveCategory(capitalize(filterCategory.category)));
                 }
               }}
             >
