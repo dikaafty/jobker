@@ -42,7 +42,8 @@ const FilterCategoriesButton = () => {
                 "filter-category-button border-1 transition-colors duration-300",
                 filterCategory.numberOfItems !== 0 
                 ? "border-primary cursor-pointer hover:bg-secondary" 
-                : "border-muted"
+                : "border-muted",
+                isFilteringIdx === idx ? "bg-secondary" : ""
               )}
               key={filterCategory.category}
             >
