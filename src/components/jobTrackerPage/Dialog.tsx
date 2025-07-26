@@ -297,7 +297,25 @@ const Dialog = () => {
                   jobTrackerStore.jobTitle && jobTrackerStore.jobUrl &&
                   jobTrackerStore.jobLocation && jobTrackerStore.companyName
                 ) {
-                  dispatch(addJob(newJob));
+                  if(jobTrackerStore.selectedJob) {
+                    dispatch(editJob([
+                      jobTrackerStore.selectedJob.id - 1, 
+                      {
+                        ...jobTrackerStore.selectedJob,
+                        jobTitle: jobTrackerStore.jobTitle,
+                        jobUrl: jobTrackerStore.jobUrl,
+                        jobLocation: jobTrackerStore.jobLocation,
+                        companyName: jobTrackerStore.companyName,
+                        jobDescription: jobTrackerStore.jobDescription,
+                        status: jobTrackerStore.status,
+                        dateApplied: jobTrackerStore.dateApplied,
+                        deadline: jobTrackerStore.deadline
+                      }
+                    ]));
+                  } else {
+                    dispatch(addJob(newJob));
+                  }
+                 
                   resetJobStatesValue();
                   dispatch(setIsOpen());
                 }
