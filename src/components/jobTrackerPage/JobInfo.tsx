@@ -1,3 +1,5 @@
+import { X } from "lucide-react";
+
 const JobInfo = () => {
   return (
     <div>
