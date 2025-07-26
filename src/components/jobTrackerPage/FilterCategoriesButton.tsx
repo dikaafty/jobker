@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { capitalize, cn } from "@/lib/utils";
 import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
 import { useEffect, useState } from "react";
 import { setNumberOfItemsCategory } from "@/features/user/jobTrackerSlice";
