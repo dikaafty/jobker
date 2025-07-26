@@ -56,7 +56,8 @@ const initialState: InitialState = {
   status: "Bookmarked",
   dateApplied: "",
   deadline: "",
-  isOpen: false
+  isOpen: false,
+  activeCategory: "all"
 }
 
 const jobTrackerSlice = createSlice({
