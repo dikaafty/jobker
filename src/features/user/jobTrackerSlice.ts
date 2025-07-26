@@ -71,6 +71,9 @@ const jobTrackerSlice = createSlice({
     addJob: (state, action) => {
       state.jobs.push(action.payload);
     },
+    editJob: (state, action) => {
+      state.jobs[action.payload[0]] = action.payload[1];
+    },
     setSelectedJob: (state, action) => {
       state.selectedJob = action.payload;
     },
