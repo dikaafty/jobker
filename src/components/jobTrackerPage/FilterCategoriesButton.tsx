@@ -6,6 +6,7 @@ import { setNumberOfItemsCategory } from "@/features/user/jobTrackerSlice";
 const FilterCategoriesButton = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
+  const [ isFilteringIdx, setIsFilteringIdx ] = useState<number | null>(null);
 
   useEffect(() => {
     const countStatus = jobTrackerStore.jobs.reduce((res: { [key: string]: number }, job) => {
