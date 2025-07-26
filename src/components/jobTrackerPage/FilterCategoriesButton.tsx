@@ -90,6 +90,7 @@ const FilterCategoriesButton = () => {
       <div className="filter-category-select-wrapper relative w-fit pl-4 mt-2 block md:hidden">
         <select
           className="filter-category-select"
+          onChange={(e) => dispatch(setActiveCategory(e.target.value))}
         >
           <option value="all">All Applications</option>
           <option value="Bookmarked">Bookmarked</option>
