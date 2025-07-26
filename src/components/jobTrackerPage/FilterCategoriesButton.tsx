@@ -18,13 +18,15 @@ const FilterCategoriesButton = () => {
       return res;
     }, {});
 
-    for (const key in countStatus) {
-      jobTrackerStore.filterCategories.forEach((filterCategory, idx) => {
+    jobTrackerStore.filterCategories.forEach((filterCategory, idx) => {
+      dispatch(setNumberOfItemsCategory([idx, 0]));
+      
+      for (const key in countStatus) {
         if(key.toLowerCase() === filterCategory.category.toLowerCase()) {
           dispatch(setNumberOfItemsCategory([idx, countStatus[key]]));
         }
-      });
-    }
+      }
+    });
   }, [jobTrackerStore.jobs]);
 
   return (
