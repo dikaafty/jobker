@@ -91,7 +91,7 @@ const FilterCategoriesButton = () => {
         <select
           className="filter-category-select"
         >
-          <option defaultValue="All Applications">All Applications</option>
+          <option value="all">All Applications</option>
           <option value="Bookmarked">Bookmarked</option>
           <option value="Applying">Applying</option>
           <option value="Applied">Applied</option>
