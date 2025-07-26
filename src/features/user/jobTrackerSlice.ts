@@ -111,7 +111,10 @@ const jobTrackerSlice = createSlice({
     },
     setNumberOfItemsCategory: (state, action) => {
       state.filterCategories[action.payload[0]].numberOfItems = action.payload[1];
-    }
+    },
+    setActiveCategory: (state, action) => {
+      state.activeCategory = action.payload;
+    },
   }
 });
 
