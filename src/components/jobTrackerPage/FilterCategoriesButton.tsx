@@ -30,6 +30,12 @@ const FilterCategoriesButton = () => {
     });
   }, [jobTrackerStore.jobs]);
 
+  useEffect(() => {
+    if(!isFilteringIdx) {
+      dispatch(setActiveCategory("all"));
+    }
+  }, [isFilteringIdx]);
+
   return (
     <div>
       {/* Desktop filter categories */}
