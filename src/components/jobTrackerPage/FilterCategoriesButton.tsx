@@ -46,6 +46,11 @@ const FilterCategoriesButton = () => {
                 isFilteringIdx === idx ? "bg-secondary" : ""
               )}
               key={filterCategory.category}
+              onClick={() => {
+                if(filterCategory.numberOfItems > 0) {
+                  setIsFilteringIdx(prev => prev !== idx || !prev ? idx : null);
+                }
+              }}
             >
               <p 
                 className={cn(
