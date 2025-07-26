@@ -33,7 +33,7 @@ const JobTable = () => {
 
         <tbody>
         {
-          jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
+          filteredJobs.length > 0 && filteredJobs.map(job => (
               <tr 
                 className="text-sm"
                 key={job.id}  
@@ -79,7 +79,7 @@ const JobTable = () => {
 
         <tbody>
         {
-          jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
+          filteredJobs.length > 0 && filteredJobs.map(job => (
             <tr 
               className="text-sm py-2"
               key={job.id}
@@ -120,7 +120,7 @@ const JobTable = () => {
 
         <tbody>
         {
-          jobTrackerStore.jobs.length > 0 && jobTrackerStore.jobs.map(job => (
+          filteredJobs.length > 0 && filteredJobs.map(job => (
             <tr 
               className="text-sm py-2"
               key={job.id}
