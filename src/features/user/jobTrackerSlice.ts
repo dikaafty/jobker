@@ -127,7 +127,7 @@ export const {
   setfilterCategories, setSelectedJob, setEditedJob, setJobTitle, setJobUrl,
   setJobLocation, setJobDescription, setCompanyName, setIsOpen, addJob, setJobs,
   setNumberOfItemsCategory, setStatus, setDateApplied, setDeadline, editJob,
-  setActiveCategory
+  setActiveCategory, setIsInfoOpen
 } = jobTrackerSlice.actions;
 
 export default jobTrackerSlice.reducer;
