@@ -3,6 +3,8 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-xs: 22.563rem;
+  
   --font-jost: "Jost";
 
   --color-background: hsl(var(--background));
