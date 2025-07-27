@@ -37,6 +37,10 @@ const JobTable = () => {
               <tr 
                 className="text-sm"
                 key={job.id}  
+                onClick={() => {
+                  dispatch(setSelectedJob(job));
+                  dispatch(setIsInfoOpen());
+                }}
               >
                 <td className="pl-5 py-3">
                   <SquarePen 
