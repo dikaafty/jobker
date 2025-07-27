@@ -45,6 +45,11 @@ const Dialog = () => {
     return maxId + 1;
   }
 
+  // Change date format from "2025-07-27" to "27/7/2025"
+  const changeDateFormat = (str: string): string => {
+    return str.split("-").reverse().join("/");
+  }
+
   const newJob: NewJob = {
     id: getNewJobId(),
     jobTitle: jobTrackerStore.jobTitle,
