@@ -87,7 +87,7 @@ const JobTable = () => {
         {
           filteredJobs.length > 0 && filteredJobs.map(job => (
             <tr 
-              className="text-sm py-2"
+              className="text-sm py-2 transition-colors duration-300 hover:bg-secondary"
               key={job.id}
               onClick={() => {
                 dispatch(setSelectedJob(job));
