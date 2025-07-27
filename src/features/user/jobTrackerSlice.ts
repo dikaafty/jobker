@@ -32,7 +32,8 @@ type InitialState = {
   dateApplied: string,
   deadline: string,
   isOpen: boolean,
-  activeCategory: string
+  activeCategory: string,
+  isInfoOpen: boolean
 }
 
 
