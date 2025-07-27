@@ -58,8 +58,8 @@ const Dialog = () => {
     companyName: jobTrackerStore.companyName,
     status: jobTrackerStore.status,
     dateSaved: new Date().toLocaleDateString("en-GB"),
-    dateApplied: jobTrackerStore.dateApplied,
-    deadline: jobTrackerStore.deadline,
+    dateApplied: changeDateFormat(jobTrackerStore.dateApplied),
+    deadline: changeDateFormat(jobTrackerStore.deadline),
     jobDescription: jobTrackerStore.jobDescription,
   }
 
