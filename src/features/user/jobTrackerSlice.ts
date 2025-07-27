@@ -117,6 +117,9 @@ const jobTrackerSlice = createSlice({
     setActiveCategory: (state, action) => {
       state.activeCategory = action.payload;
     },
+    setIsInfoOpen: (state) => {
+      state.isInfoOpen = !state.isOpen;
+    },
   }
 });
 
