@@ -98,7 +98,9 @@ const JobTable = () => {
                 <SquarePen 
                   size={16} 
                   className="cursor-pointer"
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
+
                     dispatch(setIsOpen());
                     dispatch(setSelectedJob(job));
                   }}
