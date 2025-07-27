@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
-import { setIsInfoOpen } from "@/features/user/jobTrackerSlice";
+import { setIsInfoOpen,  setSelectedJob } from "@/features/user/jobTrackerSlice";
 
 const JobInfo = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
