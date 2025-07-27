@@ -51,11 +51,11 @@ const Dialog = () => {
     jobUrl: jobTrackerStore.jobUrl,
     jobLocation: jobTrackerStore.jobLocation,
     companyName: jobTrackerStore.companyName,
-    jobDescription: jobTrackerStore.jobDescription,
     status: jobTrackerStore.status,
     dateSaved: new Date().toLocaleDateString("en-GB"),
     dateApplied: jobTrackerStore.dateApplied,
-    deadline: jobTrackerStore.deadline
+    deadline: jobTrackerStore.deadline,
+    jobDescription: jobTrackerStore.jobDescription,
   }
 
   useEffect(() => {
