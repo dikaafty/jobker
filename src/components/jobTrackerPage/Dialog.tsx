@@ -320,7 +320,7 @@ const Dialog = () => {
                         companyName: jobTrackerStore.companyName,
                         jobDescription: jobTrackerStore.jobDescription,
                         status: jobTrackerStore.status,
-                        dateApplied: jobTrackerStore.dateApplied,
+                        dateApplied: changeDateFormat(jobTrackerStore.dateApplied),
                         deadline: jobTrackerStore.deadline
                       }
                     ]));
