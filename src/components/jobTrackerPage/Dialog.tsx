@@ -50,6 +50,13 @@ const Dialog = () => {
     return str.split("-").reverse().join("/");
   }
 
+  // Revert date format back to "2025-07-27"
+  const revertDateFormat = (str: string | undefined): string | void => {
+    if(str) {
+      return str.split("/").reverse().join("-");
+    }
+  }
+
   const newJob: NewJob = {
     id: getNewJobId(),
     jobTitle: jobTrackerStore.jobTitle,
