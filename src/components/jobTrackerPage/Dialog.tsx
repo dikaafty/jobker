@@ -91,7 +91,7 @@ const Dialog = () => {
       dispatch(setJobLocation(jobTrackerStore.selectedJob.jobLocation));
       dispatch(setCompanyName(jobTrackerStore.selectedJob.companyName));
       dispatch(setStatus(jobTrackerStore.selectedJob.status));
-      dispatch(setDateApplied(jobTrackerStore.selectedJob.dateApplied));
+      dispatch(setDateApplied(revertDateFormat(jobTrackerStore.selectedJob.dateApplied)));
       dispatch(setDeadline(jobTrackerStore.selectedJob.deadline));
       dispatch(setJobDescription(jobTrackerStore.selectedJob.jobDescription));
     } else {
