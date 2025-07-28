@@ -321,7 +321,7 @@ const Dialog = () => {
                         jobDescription: jobTrackerStore.jobDescription,
                         status: jobTrackerStore.status,
                         dateApplied: changeDateFormat(jobTrackerStore.dateApplied),
-                        deadline: jobTrackerStore.deadline
+                        deadline: changeDateFormat(jobTrackerStore.deadline)
                       }
                     ]));
                   } else {
