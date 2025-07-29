@@ -36,6 +36,17 @@ const FilterCategoriesButton = () => {
     }
   }, [isFilteringId]);
 
+  useEffect(() => {
+    for (let i = 0; i < jobTrackerStore.filterCategories.length; i++) {
+      if(capitalize(jobTrackerStore.filterCategories[i].category) === jobTrackerStore.activeCategory) {
+        setIsFilteringId(jobTrackerStore.filterCategories[i].id);
+        break;
+      } else {
+        setIsFilteringId(null);
+      }
+    }
+  }, [jobTrackerStore.activeCategory]);
+
   return (
     <div>
       {/* Desktop filter categories */}
