@@ -48,7 +48,6 @@ const initialState: InitialState = {
   ],
   jobs: [],
   selectedJob: null,
-  editedJob: null,
   jobTitle: "",
   jobUrl: "",
   jobLocation: "",
@@ -59,7 +58,8 @@ const initialState: InitialState = {
   deadline: "",
   isOpen: false,
   activeCategory: "all",
-  isInfoOpen: false
+  isInfoOpen: false,
+  isEditing: false,
 }
 
 const jobTrackerSlice = createSlice({
