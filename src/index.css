@@ -152,7 +152,7 @@
 }
 
 @utility custom-date-wrapper {
-  @apply absolute inline-block;
+  @apply relative inline-block;
 }
 
 .filter-category-select > option:checked,
