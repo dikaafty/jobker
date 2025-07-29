@@ -5,6 +5,7 @@ import {
   setIsOpen, addJob, setJobs, setStatus, setDateApplied, setDeadline, setSelectedJob,
 } from "@/features/user/jobTrackerSlice";
 import { capitalize } from "@/lib/utils";
+import { Calendar } from "lucide-react";
 
 type NewJob = {
   id: number,
