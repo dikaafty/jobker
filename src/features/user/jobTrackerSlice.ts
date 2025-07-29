@@ -40,12 +40,12 @@ type InitialState = {
 
 const initialState: InitialState = {
   filterCategories: [
-    { category: "BOOKMARKED", numberOfItems: 0 },
-    { category: "APPLYING", numberOfItems: 0 },
-    { category: "APPLIED", numberOfItems: 0 },
-    { category: "INTERVIEWING", numberOfItems: 0 },
-    { category: "NEGOTIATING", numberOfItems: 0 },
-    { category: "ACCEPTED", numberOfItems: 0 },
+    { id: 1, category: "BOOKMARKED", numberOfItems: 0 },
+    { id: 2, category: "APPLYING", numberOfItems: 0 },
+    { id: 3, category: "APPLIED", numberOfItems: 0 },
+    { id: 4, category: "INTERVIEWING", numberOfItems: 0 },
+    { id: 5, category: "NEGOTIATING", numberOfItems: 0 },
+    { id: 6, category: "ACCEPTED", numberOfItems: 0 },
   ],
   jobs: [],
   selectedJob: null,
