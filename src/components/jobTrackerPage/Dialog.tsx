@@ -322,6 +322,14 @@ const Dialog = () => {
               : "justify-end"
             )}
           >
+            {
+              jobTrackerStore.isEditing && (
+                <button>
+                  Delete Job
+                </button>
+              )
+            }
+
             <div className="flex gap-2">
               <button
                 className="secondary-button py-2 sm:py-1.5 rounded-lg"
