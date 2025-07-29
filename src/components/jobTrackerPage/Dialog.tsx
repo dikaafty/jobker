@@ -56,9 +56,7 @@ const Dialog = () => {
 
   // Revert date format back to "2025-07-27"
   const revertDateFormat = (str: string | undefined): string | void => {
-    if(str) {
-      return str.split("/").reverse().join("-");
-    }
+    return str?.split("/").reverse().join("-");
   }
 
   const newJob: NewJob = {
