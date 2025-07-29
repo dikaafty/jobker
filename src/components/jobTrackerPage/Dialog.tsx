@@ -258,7 +258,7 @@ const Dialog = () => {
                     <input
                       type="date"
                       id="date-applied"
-                      className="dialog-input"
+                      className="dialog-input w-full"
                       value={jobTrackerStore.dateApplied}
                       onChange={(e) => dispatch(setDateApplied((e.target as HTMLInputElement).value))}
                     />
