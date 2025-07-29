@@ -56,7 +56,7 @@ const FilterCategoriesButton = () => {
           jobTrackerStore.filterCategories.map((filterCategory) => (
             <div 
               className={cn(
-                "filter-category-button border-1 transition-colors duration-300",
+                "filter-category-button border-1 transition-colors duration-300 select-none",
                 filterCategory.numberOfItems !== 0 
                 ? "border-primary cursor-pointer hover:bg-secondary" 
                 : "border-muted",
