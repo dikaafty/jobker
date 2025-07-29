@@ -254,6 +254,7 @@ const Dialog = () => {
                   >
                     Date Applied
                   </label>
+
                   <div className="custom-date-wrapper">
                     <input
                       type="date"
@@ -262,6 +263,10 @@ const Dialog = () => {
                       value={jobTrackerStore.dateApplied}
                       onChange={(e) => dispatch(setDateApplied((e.target as HTMLInputElement).value))}
                       ref={dateAppliedInputRef}
+                    />
+
+                    <Calendar
+                      size={16}
                     />
                   </div>
               </div>
