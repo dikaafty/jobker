@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type FilterCategory = {
+  id: number,
   category: string,
   numberOfItems: number
 }
