@@ -22,7 +22,6 @@ type InitialState = {
   filterCategories: FilterCategory[],
   jobs: Job[],
   selectedJob: Job | null,
-  editedJob: Job | null,
   jobTitle: string,
   jobUrl: string,
   jobLocation: string,
@@ -33,7 +32,8 @@ type InitialState = {
   deadline: string,
   isOpen: boolean,
   activeCategory: string,
-  isInfoOpen: boolean
+  isInfoOpen: boolean,
+  isEditing: boolean,
 }
 
 
