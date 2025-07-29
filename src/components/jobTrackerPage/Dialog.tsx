@@ -314,7 +314,7 @@ const Dialog = () => {
               />
             </div>
           </div>
-          <div className="flex max-sm:flex-col-reverse justify-end gap-2 mt-4">
+          <div className="">
             <div className="flex gap-2">
               <button
                 className="secondary-button py-2 sm:py-1.5 rounded-lg"
