@@ -25,6 +25,7 @@
   --animate-slide-in-left-delay-1: slide-in-left 1.3s ease-in-out forwards;
   --animate-slide-in-left-delay-2: slide-in-left 1.6s ease-in-out forwards;
   --animate-slide-up: slide-up 0.8s ease-in-out forwards;
+  --animate-slide-down: slide-down 0.8s ease-in-out forwards;
 
   @keyframes fade-in {
     from {
