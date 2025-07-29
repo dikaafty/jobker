@@ -85,6 +85,18 @@ const JobInfo = () => {
                 }
             })
           }
+
+          <div className="px-2 flex flex-col gap-1">
+            <h2 className="text-sm sm:text-base font-semibold">
+              Job Description
+            </h2>
+
+            {
+              jobTrackerStore.selectedJob?.jobDescription.split("\n").map((line, idx) => (
+                <p key={idx} className="text-xs sm:text-sm text-muted mb-2">{line}</p>
+              ))
+            }
+          </div>
         </div>
       </div>
     )
