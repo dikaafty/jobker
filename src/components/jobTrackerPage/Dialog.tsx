@@ -294,6 +294,7 @@ const Dialog = () => {
 
                 <Calendar 
                   size={16}
+                  className="custom-date"
                 />
               </div>
             </div>
