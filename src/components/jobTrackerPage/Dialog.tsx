@@ -268,6 +268,7 @@ const Dialog = () => {
                     <Calendar
                       size={16}
                       className="custom-date"
+                      onClick={() => dateAppliedInputRef.current?.showPicker()}
                     />
                   </div>
               </div>
