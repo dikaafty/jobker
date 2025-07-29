@@ -338,7 +338,7 @@ const Dialog = () => {
               )
             }
 
-            <div className="flex gap-2">
+            <div className="flex max-sm:flex-col-reverse gap-2">
               <button
                 className="secondary-button py-2 sm:py-1.5 rounded-lg"
                 onClick={() => {
