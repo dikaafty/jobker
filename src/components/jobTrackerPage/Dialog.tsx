@@ -291,6 +291,10 @@ const Dialog = () => {
                   onChange={(e) => dispatch(setDeadline((e.target as HTMLInputElement).value))}
                   ref={deadlineInputRef}
                 />
+
+                <Calendar 
+                  size={16}
+                />
               </div>
             </div>
 
