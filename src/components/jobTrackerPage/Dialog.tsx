@@ -289,6 +289,7 @@ const Dialog = () => {
                   className="dialog-input w-full"
                   value={jobTrackerStore.deadline}
                   onChange={(e) => dispatch(setDeadline((e.target as HTMLInputElement).value))}
+                  ref={deadlineInputRef}
                 />
               </div>
             </div>
