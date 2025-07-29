@@ -254,13 +254,15 @@ const Dialog = () => {
                   >
                     Date Applied
                   </label>
-                  <input
-                    type="date"
-                    id="date-applied"
-                    className="dialog-input"
-                    value={jobTrackerStore.dateApplied}
-                    onChange={(e) => dispatch(setDateApplied((e.target as HTMLInputElement).value))}
-                  />
+                  <div className="custom-date-wrapper">
+                    <input
+                      type="date"
+                      id="date-applied"
+                      className="dialog-input"
+                      value={jobTrackerStore.dateApplied}
+                      onChange={(e) => dispatch(setDateApplied((e.target as HTMLInputElement).value))}
+                    />
+                  </div>
               </div>
             }
 
