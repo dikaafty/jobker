@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "@/store/redux/hooks";
 import {
   setJobTitle, setJobUrl, setJobLocation, setJobDescription, setCompanyName, editJob,
   setIsOpen, addJob, setJobs, setStatus, setDateApplied, setDeadline, setSelectedJob,
-  setIsEditing
+  setIsEditing, deleteJob
 } from "@/features/user/jobTrackerSlice";
 import { capitalize, cn } from "@/lib/utils";
 import { Calendar } from "lucide-react";
