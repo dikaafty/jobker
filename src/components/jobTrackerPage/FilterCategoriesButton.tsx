@@ -54,7 +54,7 @@ const FilterCategoriesButton = () => {
               key={filterCategory.category}
               onClick={() => {
                 if(filterCategory.numberOfItems > 0) {
-                  setIsFilteringId(prev => prev !== idx || !prev ? idx : null);
+                  setIsFilteringId(prev => prev !== filterCategory.id || !prev ? filterCategory.id : null);
                   dispatch(setActiveCategory(capitalize(filterCategory.category)));
                 }
               }}
