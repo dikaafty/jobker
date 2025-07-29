@@ -260,7 +260,7 @@ const Dialog = () => {
                       type="date"
                       id="date-applied"
                       className="dialog-input w-full"
-                      value={jobTrackerStore.dateApplied}
+                      value={jobTrackerStore.dateApplied !== undefined ? jobTrackerStore.dateApplied : ""}
                       onChange={(e) => dispatch(setDateApplied((e.target as HTMLInputElement).value))}
                       ref={dateAppliedInputRef}
                     />
@@ -287,7 +287,7 @@ const Dialog = () => {
                   type="date"
                   id="deadline"
                   className="dialog-input w-full"
-                  value={jobTrackerStore.deadline}
+                  value={jobTrackerStore.deadline !== undefined ? jobTrackerStore.deadline : ""}
                   onChange={(e) => dispatch(setDeadline((e.target as HTMLInputElement).value))}
                   ref={deadlineInputRef}
                 />
