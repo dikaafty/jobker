@@ -81,9 +81,6 @@ const jobTrackerSlice = createSlice({
     setSelectedJob: (state, action) => {
       state.selectedJob = action.payload;
     },
-    setEditedJob: (state, action) => {
-      state.editedJob = action.payload;
-    },
     setJobTitle: (state, action) => {
       state.jobTitle = action.payload;
     },
@@ -119,6 +116,9 @@ const jobTrackerSlice = createSlice({
     },
     setIsInfoOpen: (state) => {
       state.isInfoOpen = !state.isInfoOpen;
+    },
+    setIsEditing: (state) => {
+      state.isEditing = !state.isEditing;
     },
   }
 });
