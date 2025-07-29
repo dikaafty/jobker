@@ -69,6 +69,15 @@
       filter: blur(0);
     }
   }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(200%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer base {
