@@ -281,13 +281,16 @@ const Dialog = () => {
               >
                 Deadline
               </label>
-              <input
-                type="date"
-                id="deadline"
-                className="dialog-input"
-                value={jobTrackerStore.deadline}
-                onChange={(e) => dispatch(setDeadline((e.target as HTMLInputElement).value))}
-              />
+
+              <div className="custom-date-wrapper">
+                <input
+                  type="date"
+                  id="deadline"
+                  className="dialog-input"
+                  value={jobTrackerStore.deadline}
+                  onChange={(e) => dispatch(setDeadline((e.target as HTMLInputElement).value))}
+                />
+              </div>
             </div>
 
             <div className="form-wrapper">
