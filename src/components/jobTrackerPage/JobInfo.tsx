@@ -71,7 +71,7 @@ const JobInfo = () => {
             jobTrackerStore.selectedJob && Object.entries(jobTrackerStore.selectedJob).map(([key, value]) => {
               if(
                   key !== "id" && key !== "jobTitle" && key !== "jobLocation" && 
-                  key !== "jobUrl" && key !== "companyName" && value
+                  key !== "jobUrl" && key !== "companyName" && key !== "jobDescription" && value
                 ) {
                   return  <div className="px-2 flex flex-col gap-1" key={key}>
                             <h2 className="text-sm sm:text-base font-semibold">
