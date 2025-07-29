@@ -326,6 +326,12 @@ const Dialog = () => {
               jobTrackerStore.isEditing && (
                 <button
                   className="primary-button py-2 sm:py-1.5 rounded-lg bg-red-600 text-foreground"
+                  onClick={() => {
+                    dispatch(deleteJob(jobTrackerStore.selectedJob?.id));
+                    dispatch(setSelectedJob(null));
+                    dispatch(setIsEditing());
+                    dispatch(setIsOpen());
+                  }}
                 >
                   Delete Job
                 </button>
