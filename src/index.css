@@ -199,3 +199,9 @@ td {
 tbody tr:last-of-type td {
   border-bottom: none;
 }
+
+.custom-date-wrapper input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
