@@ -60,7 +60,10 @@ const FilterCategoriesButton = () => {
                 filterCategory.numberOfItems !== 0 
                 ? "border-primary cursor-pointer hover:bg-secondary" 
                 : "border-muted",
-                isFilteringId === filterCategory.id ? "bg-secondary" : ""
+                isFilteringId === filterCategory.id || 
+                capitalize(filterCategory.category) === jobTrackerStore.activeCategory 
+                ? "bg-secondary" 
+                : ""
               )}
               key={filterCategory.category}
               onClick={() => {
