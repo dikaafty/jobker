@@ -49,7 +49,7 @@ const FilterCategoriesButton = () => {
                 filterCategory.numberOfItems !== 0 
                 ? "border-primary cursor-pointer hover:bg-secondary" 
                 : "border-muted",
-                isFilteringId === idx ? "bg-secondary" : ""
+                isFilteringId === filterCategory.id ? "bg-secondary" : ""
               )}
               key={filterCategory.category}
               onClick={() => {
