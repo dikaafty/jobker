@@ -324,7 +324,9 @@ const Dialog = () => {
           >
             {
               jobTrackerStore.isEditing && (
-                <button>
+                <button
+                  className="primary-button py-2 sm:py-1.5 rounded-lg bg-red-600 text-foreground"
+                >
                   Delete Job
                 </button>
               )
