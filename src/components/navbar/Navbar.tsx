@@ -81,6 +81,7 @@ const Navbar = () => {
         <NavLink 
           to="/"
           onClick={() => setIsMenuOpen(prev => !prev)}
+          className={isMenuOpen ? "animate-slide-in-left opacity-100" : ""}
         >
           HOME
         </NavLink>
@@ -88,6 +89,7 @@ const Navbar = () => {
         <NavLink 
           to="/job"
           onClick={() => setIsMenuOpen(prev => !prev)}
+          className={isMenuOpen ? "animate-slide-in-left-delay-1 opacity-100" : ""}
         >
           TRACK JOB
         </NavLink>
@@ -95,6 +97,7 @@ const Navbar = () => {
         <NavLink 
           to="/about"
           onClick={() => setIsMenuOpen(prev => !prev)}
+          className={isMenuOpen ? "animate-slide-in-left-delay-2 opacity-100" : ""}
         >
           ABOUT
         </NavLink>
