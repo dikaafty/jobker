@@ -6,7 +6,7 @@ import { setNumberOfItemsCategory, setActiveCategory } from "@/features/user/job
 const FilterCategoriesButton = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
-  const [ isFilteringIdx, setIsFilteringIdx ] = useState<number | null>(null);
+  const [ isFilteringId, setIsFilteringId ] = useState<number | null>(null);
 
   useEffect(() => {
     const countStatus = jobTrackerStore.jobs.reduce((res: { [key: string]: number }, job) => {
@@ -31,10 +31,10 @@ const FilterCategoriesButton = () => {
   }, [jobTrackerStore.jobs]);
 
   useEffect(() => {
-    if(!isFilteringIdx) {
+    if(!isFilteringId) {
       dispatch(setActiveCategory("all"));
     }
-  }, [isFilteringIdx]);
+  }, [isFilteringId]);
 
   return (
     <div>
@@ -49,12 +49,12 @@ const FilterCategoriesButton = () => {
                 filterCategory.numberOfItems !== 0 
                 ? "border-primary cursor-pointer hover:bg-secondary" 
                 : "border-muted",
-                isFilteringIdx === idx ? "bg-secondary" : ""
+                isFilteringId === idx ? "bg-secondary" : ""
               )}
               key={filterCategory.category}
               onClick={() => {
                 if(filterCategory.numberOfItems > 0) {
-                  setIsFilteringIdx(prev => prev !== idx || !prev ? idx : null);
+                  setIsFilteringId(prev => prev !== idx || !prev ? idx : null);
                   dispatch(setActiveCategory(capitalize(filterCategory.category)));
                 }
               }}
