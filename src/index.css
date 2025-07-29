@@ -21,7 +21,7 @@
   --animate-fade-in-delay: fade-in 1s ease-out 0.5s forwards;
   --animate-text-fire: text-fire ease-in-out 0.4s infinite; 
   --animate-scale-up: scale-up 0.3s ease-in-out forwards;
-
+  --animate-slide-in-left: slide-in-left 1s ease-in-out forwards;
   @keyframes fade-in {
     from {
       opacity: 0;
