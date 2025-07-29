@@ -315,52 +315,54 @@ const Dialog = () => {
             </div>
           </div>
           <div className="flex max-sm:flex-col-reverse justify-end gap-2 mt-4">
-            <button 
-              className="secondary-button py-2 sm:py-1.5 rounded-lg"
-              onClick={() => {
-                if(jobTrackerStore.selectedJob) {
-                  dispatch(setIsEditing());
-                }
-
-                dispatch(setIsOpen());
-                resetJobStatesValue();
-              }}
-            >
-              Cancel
-            </button>
-            <button 
-              className="primary-button py-2 sm:py-1.5 rounded-lg"
-              onClick={() => {
-                if(
-                  jobTrackerStore.jobTitle && jobTrackerStore.jobUrl &&
-                  jobTrackerStore.jobLocation && jobTrackerStore.companyName
-                ) {
+            <div className="flex gap-2">
+              <button
+                className="secondary-button py-2 sm:py-1.5 rounded-lg"
+                onClick={() => {
                   if(jobTrackerStore.selectedJob) {
-                    dispatch(editJob([
-                      jobTrackerStore.selectedJob.id - 1, 
-                      {
-                        ...jobTrackerStore.selectedJob,
-                        jobTitle: jobTrackerStore.jobTitle,
-                        jobUrl: jobTrackerStore.jobUrl,
-                        jobLocation: jobTrackerStore.jobLocation,
-                        companyName: jobTrackerStore.companyName,
-                        jobDescription: jobTrackerStore.jobDescription,
-                        status: jobTrackerStore.status,
-                        dateApplied: changeDateFormat(jobTrackerStore.dateApplied),
-                        deadline: changeDateFormat(jobTrackerStore.deadline)
-                      }
-                    ]));
-                  } else {
-                    dispatch(addJob(newJob));
+                    dispatch(setIsEditing());
                   }
-                 
-                  resetJobStatesValue();
                   dispatch(setIsOpen());
-                }
-              }}
-            >
-              Save Job
-            </button>
+                  resetJobStatesValue();
+                }}
+              >
+                Cancel
+              </button>
+
+              <button
+                className="primary-button py-2 sm:py-1.5 rounded-lg"
+                onClick={() => {
+                  if(
+                    jobTrackerStore.jobTitle && jobTrackerStore.jobUrl &&
+                    jobTrackerStore.jobLocation && jobTrackerStore.companyName
+                  ) {
+                    if(jobTrackerStore.selectedJob) {
+                      dispatch(editJob([
+                        jobTrackerStore.selectedJob.id - 1,
+                        {
+                          ...jobTrackerStore.selectedJob,
+                          jobTitle: jobTrackerStore.jobTitle,
+                          jobUrl: jobTrackerStore.jobUrl,
+                          jobLocation: jobTrackerStore.jobLocation,
+                          companyName: jobTrackerStore.companyName,
+                          jobDescription: jobTrackerStore.jobDescription,
+                          status: jobTrackerStore.status,
+                          dateApplied: changeDateFormat(jobTrackerStore.dateApplied),
+                          deadline: changeDateFormat(jobTrackerStore.deadline)
+                        }
+                      ]));
+                    } else {
+                      dispatch(addJob(newJob));
+                    }
+              
+                    resetJobStatesValue();
+                    dispatch(setIsOpen());
+                  }
+                }}
+              >
+                Save Job
+              </button>
+            </div>
           </div>
         </div>
       </div>
