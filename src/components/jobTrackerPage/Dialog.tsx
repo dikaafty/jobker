@@ -25,6 +25,7 @@ const Dialog = () => {
   const dispatch = useAppDispatch();
   const [ loaded, setLoaded ] = useState<boolean>(false);
   const dateAppliedInputRef = useRef<HTMLInputElement | null>(null);
+  const deadlineInputRef = useRef<HTMLInputElement | null>(null);
 
   const resetJobStatesValue = (): void => {
     dispatch(setJobTitle(""));
