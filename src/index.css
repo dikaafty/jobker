@@ -58,6 +58,17 @@
       opacity: 1;
     }
   }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(100vw);
+      filter: blur(2px);
+    }
+    100% {
+      transform: translateX(0);
+      filter: blur(0);
+    }
+  }
 }
 
 @layer base {
