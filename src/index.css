@@ -151,6 +151,10 @@
   outline-none;
 }
 
+@utility custom-date-wrapper {
+  @apply absolute inline-block;
+}
+
 .filter-category-select > option:checked,
 .dialog-select > option:checked {
   background-color: hsl(var(--secondary-foreground));
