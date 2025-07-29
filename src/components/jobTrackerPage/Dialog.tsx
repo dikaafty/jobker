@@ -24,6 +24,7 @@ const Dialog = () => {
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
   const dispatch = useAppDispatch();
   const [ loaded, setLoaded ] = useState<boolean>(false);
+  const dateAppliedInputRef = useRef<HTMLInputElement | null>(null);
 
   const resetJobStatesValue = (): void => {
     dispatch(setJobTitle(""));
