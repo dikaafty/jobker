@@ -70,7 +70,10 @@ const Navbar = () => {
           isMenuOpen ? "right-0 pointer-events-auto" : "-right-190 pointer-events-none"
         )}
       >
-        <div className="w-1/2 flex flex-col justify-center items-center gap-2 mb-5">
+        <div className={cn(
+          "w-1/2 flex flex-col justify-center items-center gap-2 mb-5",
+          isMenuOpen ? "animate-slide-up" : ""
+        )}>
           <div className="w-40 h-0.5 bg-foreground rounded-full" />
           <div className="w-32 h-0.5 bg-foreground rounded-full" />
         </div>
