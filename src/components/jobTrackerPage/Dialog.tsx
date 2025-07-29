@@ -316,7 +316,7 @@ const Dialog = () => {
           </div>
           <div 
             className={cn(
-              "flex max-sm:flex-col-reverse mt-4",
+              "flex max-sm:flex-col-reverse max-sm:gap-5 mt-4",
               jobTrackerStore.isEditing 
               ? "justify-between"
               : "justify-end"
