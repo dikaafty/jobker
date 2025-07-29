@@ -314,7 +314,14 @@ const Dialog = () => {
               />
             </div>
           </div>
-          <div className="">
+          <div 
+            className={cn(
+              "flex max-sm:flex-col-reverse mt-4",
+              jobTrackerStore.isEditing 
+              ? "justify-between"
+              : "justify-end"
+            )}
+          >
             <div className="flex gap-2">
               <button
                 className="secondary-button py-2 sm:py-1.5 rounded-lg"
