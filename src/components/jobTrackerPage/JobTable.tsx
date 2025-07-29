@@ -50,6 +50,7 @@ const JobTable = () => {
                       e.stopPropagation();
 
                       dispatch(setIsOpen());
+                      dispatch(setIsEditing());
                       dispatch(setSelectedJob(job));
                     }}
                   />
@@ -102,6 +103,7 @@ const JobTable = () => {
                     e.stopPropagation();
 
                     dispatch(setIsOpen());
+                    dispatch(setIsEditing());
                     dispatch(setSelectedJob(job));
                   }}
                 />
@@ -149,6 +151,7 @@ const JobTable = () => {
                     e.stopPropagation();
 
                     dispatch(setIsOpen());
+                    dispatch(setIsEditing());
                     dispatch(setSelectedJob(job));
                   }}
                 />
