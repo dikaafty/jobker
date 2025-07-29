@@ -21,12 +21,12 @@ const JobTable = () => {
         <thead>
           <tr className="bg-card font-semibold text-sm">
             <td className="pl-5 py-3 border-b border-primary"></td>
-            <td className="px-6 py-3 border-b border-primary">Job Position</td>
-            <td className="px-6 py-3 border-b border-primary">Company</td>
-            <td className="px-6 py-3 border-b border-primary">Location</td>
-            <td className="px-6 py-3 border-b border-primary">Status</td>
-            <td className="px-6 py-3 border-b border-primary">Date Saved</td>
-            <td className="px-6 py-3 border-b border-primary">Date Applied</td>
+            <td className="max-[835px]:px-3 px-6 py-3 border-b border-primary">Job Position</td>
+            <td className="max-[835px]:px-3 px-6 py-3 border-b border-primary">Company</td>
+            <td className="max-[835px]:px-3 px-6 py-3 border-b border-primary">Location</td>
+            <td className="max-[835px]:px-3 px-6 py-3 border-b border-primary">Status</td>
+            <td className="max-[835px]:px-3 px-6 py-3 border-b border-primary">Date Saved</td>
+            <td className="max-[835px]:px-3 px-6 py-3 border-b border-primary">Date Applied</td>
             <td className="pr-5 py-3 border-b border-primary">Deadline</td>
           </tr>
         </thead>
@@ -55,12 +55,12 @@ const JobTable = () => {
                     }}
                   />
                 </td>
-                <td className="px-6 py-3">{job.jobTitle}</td>
-                <td className="px-6 py-3">{job.companyName}</td>
-                <td className="px-6 py-3">{job.jobLocation}</td>
-                <td className="px-6 py-3">{job.status}</td>
-                <td className="px-6 py-3">{job.dateSaved}</td>
-                <td className="px-6 py-3">{job.dateApplied}</td>
+                <td className="max-[835px]:px-3 px-6 py-3">{job.jobTitle}</td>
+                <td className="max-[835px]:px-3 px-6 py-3">{job.companyName}</td>
+                <td className="max-[835px]:px-3 px-6 py-3">{job.jobLocation}</td>
+                <td className="max-[835px]:px-3 px-6 py-3">{job.status}</td>
+                <td className="max-[835px]:px-3 px-6 py-3">{job.dateSaved}</td>
+                <td className="max-[835px]:px-3 px-6 py-3">{job.dateApplied}</td>
                 <td className="pr-5 py-3">{job.deadline}</td>
               </tr>
           ))
