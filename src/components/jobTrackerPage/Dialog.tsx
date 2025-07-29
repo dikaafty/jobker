@@ -318,8 +318,11 @@ const Dialog = () => {
             <button 
               className="secondary-button py-2 sm:py-1.5 rounded-lg"
               onClick={() => {
+                if(jobTrackerStore.selectedJob) {
+                  dispatch(setIsEditing());
+                }
+
                 dispatch(setIsOpen());
-                dispatch(setIsEditing());
                 resetJobStatesValue();
               }}
             >
