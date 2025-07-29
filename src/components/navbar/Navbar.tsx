@@ -99,7 +99,10 @@ const Navbar = () => {
           ABOUT
         </NavLink>
 
-        <div className="w-1/2 flex flex-col justify-center items-center gap-2 mt-5">
+        <div className={cn(
+          "w-1/2 flex flex-col justify-center items-center gap-2 mt-5",
+          isMenuOpen ? "animate-slide-down" : ""
+        )}>
           <div className="w-32 h-0.5 bg-foreground rounded-full" />
           <div className="w-40 h-0.5 bg-foreground rounded-full" />
         </div>
