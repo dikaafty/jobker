@@ -108,6 +108,10 @@ const Dialog = () => {
     }
   }, [jobTrackerStore.isOpen]);
 
+  useEffect(() => {
+    console.log(jobTrackerStore.selectedJob);
+  }, [jobTrackerStore.selectedJob]);
+
   return (
     jobTrackerStore.isOpen && (
       <div 
@@ -366,7 +370,7 @@ const Dialog = () => {
                   ) {
                     if(jobTrackerStore.selectedJob) {
                       dispatch(editJob([
-                        jobTrackerStore.selectedJob.id - 1,
+                        jobTrackerStore.jobs.findIndex(job => job.id === jobTrackerStore.selectedJob?.id),
                         {
                           ...jobTrackerStore.selectedJob,
                           jobTitle: jobTrackerStore.jobTitle,
