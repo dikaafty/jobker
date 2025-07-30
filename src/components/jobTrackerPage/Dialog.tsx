@@ -379,6 +379,8 @@ const Dialog = () => {
                           deadline: changeDateFormat(jobTrackerStore.deadline)
                         }
                       ]));
+
+                      dispatch(setIsEditing());
                     } else {
                       dispatch(addJob(newJob));
                     }
