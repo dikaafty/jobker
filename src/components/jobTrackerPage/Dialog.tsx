@@ -164,6 +164,7 @@ const Dialog = () => {
                 className="dialog-input"
                 value={jobTrackerStore.jobUrl}
                 onChange={(e) => dispatch(setJobUrl((e.target as HTMLInputElement).value))}
+                placeholder="https://www.remoterocketship.com/"
               />
             </div>
 
