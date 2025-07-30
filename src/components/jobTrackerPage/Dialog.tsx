@@ -315,6 +315,7 @@ const Dialog = () => {
                 className="dialog-input h-40"
                 value={jobTrackerStore.jobDescription}
                 onChange={(e) => dispatch(setJobDescription((e.target as HTMLTextAreaElement).value))}
+                placeholder="We are looking for a passionate Front-End Developer to..."
               />
             </div>
           </div>
