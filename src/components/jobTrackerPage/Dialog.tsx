@@ -187,6 +187,7 @@ const Dialog = () => {
                 className="dialog-input"
                 value={jobTrackerStore.jobLocation}
                 onChange={(e) => dispatch(setJobLocation((e.target as HTMLInputElement).value))}
+                placeholder="München, Germany"
               />
             </div>
 
