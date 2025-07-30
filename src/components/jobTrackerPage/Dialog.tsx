@@ -141,6 +141,7 @@ const Dialog = () => {
                 className="dialog-input"
                 value={jobTrackerStore.jobTitle}
                 onChange={(e) => dispatch(setJobTitle((e.target as HTMLInputElement).value))}
+                placeholder="Front end Developer"
               />
             </div>
 
