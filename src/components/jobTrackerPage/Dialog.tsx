@@ -210,6 +210,7 @@ const Dialog = () => {
                 className="dialog-input"
                 value={jobTrackerStore.companyName}
                 onChange={(e) => dispatch(setCompanyName((e.target as HTMLInputElement).value))}
+                placeholder="Chaffer Consulting"
               />
             </div>
 
