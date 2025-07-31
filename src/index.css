@@ -193,6 +193,11 @@
   @apply absolute right-2 top-1/2 -translate-y-1/2 pointer-events-auto cursor-pointer text-foreground;
 }
 
+html {
+  scrollbar-color: hsl(var(--foreground)) hsl(var(--background));
+  scrollbar-width: medium;
+}
+
 .filter-category-select > option:checked,
 .dialog-select > option:checked {
   background-color: hsl(var(--secondary-foreground));
