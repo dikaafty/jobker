@@ -18,8 +18,7 @@ const HeroSection = () => {
       <div className="mt-5 flex justify-center items-center gap-4">
         <NavLink
           to="/job"
-          className="primary-button active:translate-x-0.5 active:translate-y-0.5 transition-transform
-            duration-300 hover:-translate-0.5 active:opacity-95"
+          className="primary-button"
         >
           Get Started
         </NavLink>
