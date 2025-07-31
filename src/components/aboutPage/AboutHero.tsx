@@ -1,6 +1,6 @@
 const AboutHero = () => {
   return (
-    <div className="bg-card flex flex-col justify-center items-center gap-8 font-jost py-20">
+    <div className="h-[80vh] bg-card flex flex-col justify-center items-center gap-8 font-jost py-5">
       <div className="px-3 py-1 text-xs font-semibold border-1 border-secondary-foreground rounded-md">
         ABOUT
       </div>
