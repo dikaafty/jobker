@@ -1,3 +1,8 @@
+type JobkerGuide = {
+  title: string,
+  description: string
+}
+
 const AboutContent = () => {
   return (
     <div>
