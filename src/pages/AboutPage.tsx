@@ -5,6 +5,7 @@ const AboutPage = () => {
   return (
     <section>
       <AboutHero />
+      <AboutContent />
     </section>
   )
 }
