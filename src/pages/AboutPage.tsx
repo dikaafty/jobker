@@ -12,4 +12,4 @@ const AboutPage = () => {
 }
 
 const AboutPageWithTransition = transition(AboutPage);
-export default AboutPage;
+export default AboutPageWithTransition;
