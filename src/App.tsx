@@ -7,6 +7,14 @@ import AboutPage from "@/pages/AboutPage";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+
+  return (
+    <Routes location={location} key={location.pathname}>
+      <Route index element={<Homepage />} />
+      <Route path="/job" element={<JobTrackerPage />} />
+      <Route path="/about" element={<AboutPage />} />
+    </Routes>
+  );
 }
 
 const App = () => {
