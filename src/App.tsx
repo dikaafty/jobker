@@ -22,12 +22,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Navbar />
-
-        <Routes>
-          <Route index element={<Homepage />} />
-          <Route path="/job" element={<JobTrackerPage />} />
-          <Route path="/about" element={<AboutPage />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </>
   )
