@@ -18,4 +18,5 @@ const JobTrackerPage = () => {
   )
 }
 
+const JobTrackerPageWithTransition = transition(JobTrackerPage);
 export default JobTrackerPage;
