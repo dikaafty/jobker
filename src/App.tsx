@@ -9,11 +9,13 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <Routes location={location} key={location.pathname}>
-      <Route index element={<Homepage />} />
-      <Route path="/job" element={<JobTrackerPage />} />
-      <Route path="/about" element={<AboutPage />} />
-    </Routes>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route index element={<Homepage />} />
+        <Route path="/job" element={<JobTrackerPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 
