@@ -57,3 +57,5 @@ const transition = (OgComponent: React.FC): React.FC => {
 
   return TransitionComponent;
 }
+
+export default transition;
