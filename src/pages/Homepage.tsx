@@ -11,4 +11,4 @@ const Homepage = () => {
 }
 
 const HomepageWithTransition = transition(Homepage);
-export default Homepage;
+export default HomepageWithTransition;
