@@ -267,3 +267,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   transform-origin: left;
   background: hsl(var(--card));
 }
+
+.slide-out-two {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  transform-origin: left;
+  background: hsl(var(--card-foreground));
+}
