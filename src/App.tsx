@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar/Navbar";
 import AboutPage from "@/pages/AboutPage";
 
 const AnimatedRoutes = () => {
-
+  const location = useLocation();
 }
 
 const App = () => {
