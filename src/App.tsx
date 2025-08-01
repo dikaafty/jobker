@@ -5,6 +5,10 @@ import JobTrackerPage from "@/pages/JobTrackerPage";
 import Navbar from "@/components/navbar/Navbar";
 import AboutPage from "@/pages/AboutPage";
 
+const AnimatedRoutes = () => {
+
+}
+
 const App = () => {
   return (
     <>
