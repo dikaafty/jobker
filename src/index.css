@@ -278,4 +278,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 100vh;
   transform-origin: left;
   background: hsl(var(--card-foreground));
+  z-index: 60;
 }
