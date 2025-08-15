@@ -6,6 +6,9 @@ const AddJobButton = () => {
   const dispatch = useAppDispatch();
   const jobTrackerStore = useAppSelector(state => state.jobTracker);
 
+  const filteredJobs = jobTrackerStore.jobs
+  .filter(job => jobTrackerStore.activeCategory === "all" || job.status === jobTrackerStore.activeCategory);
+
   return (
     <div 
       className={cn(
