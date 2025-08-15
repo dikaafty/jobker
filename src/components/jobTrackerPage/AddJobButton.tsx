@@ -13,7 +13,7 @@ const AddJobButton = () => {
     <div 
       className={cn(
         "w-full mt-6 md:mt-8 max-md:pl-4 flex md:justify-center items-center",
-        filteredJobs.length > 0 ? "mb-6" : "mb-0",
+        filteredJobs.length > 0 ? "mb-6 md:mb-8" : "mb-0",
       )}>
       <button 
         className="secondary-button"
