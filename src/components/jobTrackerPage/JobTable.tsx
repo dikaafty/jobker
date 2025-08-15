@@ -9,6 +9,12 @@ const JobTable = () => {
   const filteredJobs = jobTrackerStore.jobs
   .filter(job => jobTrackerStore.activeCategory === "all" || job.status === jobTrackerStore.activeCategory);
 
+  if(filteredJobs.length === 0) {
+    return (
+      
+    );
+  }
+
   return (
     filteredJobs.length > 0 && (
       <div className="max-md:pl-4 flex md:justify-center pb-10 px-5">
