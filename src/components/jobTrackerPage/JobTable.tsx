@@ -11,7 +11,12 @@ const JobTable = () => {
 
   if(filteredJobs.length === 0) {
     return (
-      
+      <h1
+        className="text-center font-jost font-semibold text-2xl md:text-4xl px-12 md:px-32 lg:px-60
+        h-[calc(100vh-180px)] sm:h-[calc(100vh-184px)] md:h-[calc(100vh-234px)] flex justify-center items-center"
+      >
+        Your dashboard’s a bit lonely. Add your first job and get tracking!
+      </h1>
     );
   }
 
