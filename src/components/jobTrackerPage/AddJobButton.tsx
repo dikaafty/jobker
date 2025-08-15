@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 
 const AddJobButton = () => {
   const dispatch = useAppDispatch();
+  const jobTrackerStore = useAppSelector(state => state.jobTracker);
 
   return (
     <div 
