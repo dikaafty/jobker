@@ -1,6 +1,5 @@
 import HeroSection from "../HeroSection";
 import { render, screen } from "@/lib/test-utils";
-import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router-dom";
 
 const renderHeroSection = (): void => {
