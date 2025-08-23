@@ -3,7 +3,7 @@ import { MemoryRouter, type MemoryRouterProps } from "react-router-dom";
 import { render, type RenderOptions } from "@testing-library/react";
 import { type ReactElement } from "react";
 
-const renderWithRouter = (
+export const renderWithRouter = (
   ui: ReactElement,
   renderProps?: MemoryRouterProps,
   renderOptions?: RenderOptions
