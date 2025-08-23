@@ -3,6 +3,8 @@ import { render, screen, userEvent, renderWithRouter } from "@/lib/test-utils";
 
 describe("HeroSection Component", () => {
   test("renders HeroSection with correct elements", () => {
+    renderWithRouter(<HeroSection />);
+
     expect(screen.getByText("YOUR CAREER")).toBeInTheDocument();
     expect(screen.getByText("DASHBOARD STARTS HERE")).toBeInTheDocument();
     expect(screen.getByText("Organize your applications, monitor progress, and take control of your career."))
