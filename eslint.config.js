@@ -19,5 +19,18 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      'react/display-name': ['error', {
+        'ignoreTranspilerName': false
+      }],
+    },
+    overrides: [
+      {
+        files: ['**/*test-utils*', '**/__tests__/**', '**/*.test.*'],
+        rules: {
+          'react/display-name': 'off',
+        }
+      }
+    ]
   },
 ])
