@@ -1,5 +1,5 @@
 import HeroSection from "../HeroSection";
-import { render, screen, userEvent } from "@/lib/test-utils";
+import { render, screen, userEvent, renderWithRouter } from "@/lib/test-utils";
 
 describe("HeroSection Component", () => {
   test("renders HeroSection with correct elements", () => {
