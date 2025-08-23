@@ -30,5 +30,45 @@ export const renderWithRouter = (
   );
 }
 
+export const renderWithProvider = (
+  ui: ReactElement,
+  {
+    preloadedState = {},
+    store,
+    storeType = "unit",
+    ...renderOptions
+  }: ExtraOptions & RenderOptions = {},
+): RenderResult & { store: any } => {
+  let testStore: Store;
+
+  if(store) {
+    testStore = store;
+  } else if(storeType === "unit") {
+    testStore = {
+      getState: () => preloadedState,
+      subscribe: () => () => {},
+      dispatch: jest.fn<AnyAction, [AnyAction]>()
+    } as unknown as Store;
+  } else {
+    testStore = configureStore({
+      reducer: jobTrackerReducer,
+      preloadedState,
+    });
+  }
+
+  const Wrapper = ({ children }: React.PropsWithChildren): JSX.Element => {
+    return (
+      <Provider store={testStore}>
+        {children}
+      </Provider>
+    );
+  }
+
+  return {
+    store: testStore,
+    ...render(ui, { wrapper: Wrapper, ...renderOptions })
+  };
+}
+
 export * from "@testing-library/react";
 export { default as userEvent } from "@testing-library/user-event";
