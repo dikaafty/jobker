@@ -6,6 +6,12 @@ import { Provider } from "react-redux";
 import { configureStore, type Store, type AnyAction } from "@reduxjs/toolkit";
 import jobTrackerReducer from "@/features/user/jobTrackerSlice";
 
+interface ExtraOptions {
+  preloadedState?: any,
+  store?: Store,
+  storeType?: "unit" | "integration",
+}
+
 export const renderWithRouter = (
   ui: ReactElement,
   renderProps?: MemoryRouterProps,
