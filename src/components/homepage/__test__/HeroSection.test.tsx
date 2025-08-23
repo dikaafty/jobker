@@ -12,4 +12,10 @@ describe("HeroSection Component", () => {
     expect(screen.getByRole("link", { name: "Get Started" })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: "About Us" })).toBeInTheDocument();
   });
+
+  test("Get Started link points to /job", () => {
+    renderWithRouter(<HeroSection />);
+
+    expect(screen.getByRole("link", { name: "Get Started" })).toHaveAttribute("href", "/job");
+  });
 });
