@@ -108,10 +108,6 @@ const Dialog = () => {
     }
   }, [jobTrackerStore.isOpen]);
 
-  useEffect(() => {
-    console.log(jobTrackerStore.selectedJob);
-  }, [jobTrackerStore.selectedJob]);
-
   return (
     jobTrackerStore.isOpen && (
       <div 
