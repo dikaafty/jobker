@@ -4,6 +4,7 @@ import { render, type RenderOptions, type RenderResult } from "@testing-library/
 import { type ReactElement } from "react";
 import { Provider } from "react-redux";
 import { configureStore, type Store, type AnyAction } from "@reduxjs/toolkit";
+import jobTrackerReducer from "@/features/user/jobTrackerSlice";
 
 export const renderWithRouter = (
   ui: ReactElement,
