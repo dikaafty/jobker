@@ -1,6 +1,5 @@
 import HeroSection from "../HeroSection";
 import { render, screen, userEvent } from "@/lib/test-utils";
-import { MemoryRouter } from "react-router-dom";
 
 describe("HeroSection Component", () => {
   test("renders HeroSection with correct elements", () => {
