@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { MemoryRouter, type MemoryRouterProps } from "react-router-dom";
 import { render, type RenderOptions, type RenderResult } from "@testing-library/react";
-import { type ReactElement } from "react";
+import { type JSX, type ReactElement } from "react";
 import { Provider } from "react-redux";
 import { configureStore, type Store, type AnyAction } from "@reduxjs/toolkit";
 import jobTrackerReducer from "@/features/user/jobTrackerSlice";
