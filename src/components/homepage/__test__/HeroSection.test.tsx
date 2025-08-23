@@ -18,4 +18,10 @@ describe("HeroSection Component", () => {
 
     expect(screen.getByRole("link", { name: "Get Started" })).toHaveAttribute("href", "/job");
   });
+
+  test("About Us link points to /about", () => {
+    renderWithRouter(<HeroSection />);
+
+    expect(screen.getByRole("link", { name: "About Us" })).toHaveAttribute("href", "/about");
+  });
 });
