@@ -18,4 +18,24 @@ describe("AddJobButton component", () => {
 
     expect(screen.getByRole("button")).toBeInTheDocument();
   });
+
+  test("dispatches setIsOpen reducer when Add Job button clicked", async () => {
+    const { store } = renderWithProvider(
+      <AddJobButton />,
+      {
+        preloadedState: {
+          jobTracker: {
+            jobs: [],
+            activeCategory: "all"
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    await user.click(screen.getByRole("button", { name: /add job/i }));
+
+    expect(store.dispatch).toHaveBeenCalledWith(setIsOpen());
+  });
 });
