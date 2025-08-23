@@ -11,7 +11,7 @@ export const renderWithRouter = (
   return render(
     ui,
     {
-      wrapper: ({ children }) => (
+      wrapper: ({ children }: React.PropsWithChildren) => (
         <MemoryRouter {...renderProps}>
           {children}
         </MemoryRouter>
