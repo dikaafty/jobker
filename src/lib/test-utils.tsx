@@ -7,7 +7,7 @@ export const renderWithRouter = (
   ui: ReactElement,
   renderProps?: MemoryRouterProps,
   renderOptions?: RenderOptions
-) => {
+): RenderResult => {
   return render(
     ui,
     {
