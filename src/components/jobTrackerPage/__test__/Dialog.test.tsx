@@ -177,4 +177,37 @@ describe("Dialog component", () => {
 
     expect(screen.getByLabelText(/job description/i)).toHaveValue("Some description...");
   });
+
+  test("renders Status select with options", () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [
+              { category: "BOOKMARKED" },
+              { category: "APPLYING" },
+              { category: "APPLIED" },
+              { category: "INTERVIEWING" },
+              { category: "NEGOTIATING" },
+              { category: "ACCEPTED" },
+            ],
+          }
+        }
+      }
+    );
+
+    expect(screen.getByLabelText(/status/i)).toBeInTheDocument();
+
+    // Chech options are in the document
+    expect(screen.getByRole("option", { name: "Bookmarked" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "Applying" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "Applied" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "Interviewing" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "Negotiating" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "Accepted" })).toBeInTheDocument();
+  });
 });
