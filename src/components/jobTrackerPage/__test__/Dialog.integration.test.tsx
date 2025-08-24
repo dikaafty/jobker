@@ -72,6 +72,35 @@ describe("Dialog component", () => {
     expect(screen.queryByLabelText(/date applied/i)).toBeInTheDocument();
   });
 
+  test("updates Redux store dateApplied state when Date Applied input's value changed", async () => {
+    const { store } = renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [
+              { category: "BOOKMARKED" },
+              { category: "APPLIED" },
+            ],
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(store.getState().jobTracker.dateApplied).toBe("");
+
+    await user.selectOptions(screen.getByLabelText(/status/i), "Applied");
+    fireEvent.change(screen.getByLabelText(/date applied/i), { target: { value: "2025-08-04" } });
+    
+    expect(store.getState().jobTracker.dateApplied).toBe("2025-08-04");
+  });
+
   test("updates Redux store deadline state when Deadline input's value changed", () => {
     const { store } = renderWithProvider(
       <Dialog />,
