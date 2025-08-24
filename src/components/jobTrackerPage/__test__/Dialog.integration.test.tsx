@@ -72,6 +72,29 @@ describe("Dialog component", () => {
     expect(screen.queryByLabelText(/date applied/i)).toBeInTheDocument();
   });
 
+  test("updates Redux store deadline state when Deadline input's value changed", () => {
+    const { store } = renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    expect(store.getState().jobTracker.deadline).toBe("");
+
+    fireEvent.change(screen.getByLabelText(/deadline/i), { target: { value: "2025-08-24" } });
+    
+    expect(store.getState().jobTracker.deadline).toBe("2025-08-24");
+  });
+
   test("updates Redux store isOpen state and closes the Dialog when Cancel button clicked", async () => {
      const { store } = renderWithProvider(
       <Dialog />,
