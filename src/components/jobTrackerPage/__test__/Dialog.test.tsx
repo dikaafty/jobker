@@ -81,4 +81,28 @@ describe("Dialog component", () => {
 
     expect(screen.getByLabelText(/job title/i)).toHaveValue("Front-end Developer");
   });
+
+  test("Job Url input can be populated", async () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByLabelText(/job url/i)).toHaveValue("");
+
+    await user.type(screen.getByLabelText(/job url/i), "https://www.remoterocketship.com/jobs");
+
+    expect(screen.getByLabelText(/job url/i)).toHaveValue("https://www.remoterocketship.com/jobs");
+  });
 });
