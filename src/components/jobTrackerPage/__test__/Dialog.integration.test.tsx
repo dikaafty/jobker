@@ -30,6 +30,48 @@ describe("Dialog component", () => {
     expect(store.getState().jobTracker.status).toBe("Applying");
   });
 
+  test("displays Date Applied input if Status state's value is not Bookmarked or Applying", async () => {
+    const { store } = renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [
+              { category: "BOOKMARKED" },
+              { category: "APPLYING" },
+              { category: "APPLIED" },
+              { category: "INTERVIEWING" },
+            ],
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(store.getState().jobTracker.status).toBe("Bookmarked");
+    expect(screen.queryByLabelText(/date applied/i)).not.toBeInTheDocument();
+
+    await user.selectOptions(screen.getByLabelText(/status/i), "Applied");
+
+    expect(store.getState().jobTracker.status).toBe("Applied");
+    expect(screen.queryByLabelText(/date applied/i)).toBeInTheDocument();
+
+    await user.selectOptions(screen.getByLabelText(/status/i), "Applying");
+
+    expect(store.getState().jobTracker.status).toBe("Applying");
+    expect(screen.queryByLabelText(/date applied/i)).not.toBeInTheDocument();
+
+    await user.selectOptions(screen.getByLabelText(/status/i), "Interviewing");
+
+    expect(store.getState().jobTracker.status).toBe("Interviewing");
+    expect(screen.queryByLabelText(/date applied/i)).toBeInTheDocument();
+  });
+
   test("updates Redux store isOpen state and closes the Dialog when Cancel button clicked", async () => {
      const { store } = renderWithProvider(
       <Dialog />,
