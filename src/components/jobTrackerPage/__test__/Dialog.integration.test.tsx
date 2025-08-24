@@ -1,2 +1,2 @@
 import Dialog from "../Dialog";
-import { screen, userEvent } from "@/lib/test-utils";
+import { screen, userEvent, renderWithProvider } from "@/lib/test-utils";
