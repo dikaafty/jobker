@@ -129,4 +129,28 @@ describe("Dialog component", () => {
 
     expect(screen.getByLabelText(/job location/i)).toHaveValue("Munchen, Germany");
   });
+
+  test("Company Name input can be populated", async () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByLabelText(/company name/i)).toHaveValue("");
+
+    await user.type(screen.getByLabelText(/company name/i), "Chaffer Consulting");
+
+    expect(screen.getByLabelText(/company name/i)).toHaveValue("Chaffer Consulting");
+  });
 });
