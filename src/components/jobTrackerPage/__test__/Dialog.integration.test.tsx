@@ -1,5 +1,5 @@
 import Dialog from "../Dialog";
-import { screen, userEvent, renderWithProvider } from "@/lib/test-utils";
+import { screen, userEvent, renderWithProvider, fireEvent } from "@/lib/test-utils";
 
 describe("Dialog component", () => {
   test("updates Redux store Status state when Status select value changes", async () => {
