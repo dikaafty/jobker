@@ -210,4 +210,33 @@ describe("Dialog component", () => {
     expect(screen.getByRole("option", { name: "Negotiating" })).toBeInTheDocument();
     expect(screen.getByRole("option", { name: "Accepted" })).toBeInTheDocument();
   });
+
+  test("Status select options can be selected", async () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [
+              { category: "BOOKMARKED" },
+              { category: "APPLIED" },
+            ],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect((screen.getByRole("option", { name: "Bookmarked" }) as HTMLOptionElement).selected).toBe(true);
+    expect((screen.getByRole("option", { name: "Applied" }) as HTMLOptionElement).selected).toBe(false);
+
+    await user.selectOptions(screen.getByLabelText(/status/i), "Applied");
+
+    expect((screen.getByRole("option", { name: "Applied" }) as HTMLOptionElement).selected).toBe(true);
+    expect((screen.getByRole("option", { name: "Bookmarked" }) as HTMLOptionElement).selected).toBe(false);
+  });
 });
