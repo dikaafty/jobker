@@ -57,4 +57,28 @@ describe("Dialog component", () => {
     expect(screen.getByRole("button", { name: /cancel/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /save job/i })).toBeInTheDocument();
   });
+
+  test("Job Title input can be populated", async () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByLabelText(/job title/i)).toHaveValue("");
+
+    await user.type(screen.getByLabelText(/job title/i), "Front-end Developer");
+
+    expect(screen.getByLabelText(/job title/i)).toHaveValue("Front-end Developer");
+  });
 });
