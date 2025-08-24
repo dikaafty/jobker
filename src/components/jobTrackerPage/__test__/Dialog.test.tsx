@@ -105,4 +105,28 @@ describe("Dialog component", () => {
 
     expect(screen.getByLabelText(/job url/i)).toHaveValue("https://www.remoterocketship.com/jobs");
   });
+
+  test("Job Location input can be populated", async () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByLabelText(/job location/i)).toHaveValue("");
+
+    await user.type(screen.getByLabelText(/job location/i), "Munchen, Germany");
+
+    expect(screen.getByLabelText(/job location/i)).toHaveValue("Munchen, Germany");
+  });
 });
