@@ -153,4 +153,28 @@ describe("Dialog component", () => {
 
     expect(screen.getByLabelText(/company name/i)).toHaveValue("Chaffer Consulting");
   });
+
+  test("Job Description textarea can be populated", async () => {
+    renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByLabelText(/job description/i)).toHaveValue("");
+
+    await user.type(screen.getByLabelText(/job description/i), "Some description...");
+
+    expect(screen.getByLabelText(/job description/i)).toHaveValue("Some description...");
+  });
 });
