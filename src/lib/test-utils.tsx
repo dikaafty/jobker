@@ -51,8 +51,12 @@ export const renderWithProvider = (
     } as unknown as Store;
   } else {
     testStore = configureStore({
-      reducer: jobTrackerReducer,
-      preloadedState,
+      reducer: {
+        jobTracker: jobTrackerReducer
+      },
+      preloadedState: preloadedState as {
+        jobTracker: ReturnType<typeof jobTrackerReducer>;
+      },
     });
   }
 
