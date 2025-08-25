@@ -61,4 +61,30 @@ describe("FilterCategoriesButton component", () => {
 
     expect(screen.getByTestId(/bookmarked button/i)).not.toHaveClass("bg-secondary");
   });
+
+  test("cannot apply bg-secondary on desktop filter category button that has no item", async () => {
+    renderWithProvider(
+      <FilterCategoriesButton />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [
+              { id: 1, category: "BOOKMARKED", numberOfItems: 0 }, // <= has 0 item
+            ],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByTestId(/bookmarked button/i)).not.toHaveClass("bg-secondary");
+
+    await user.click(screen.getByTestId(/bookmarked button/i));
+
+    expect(screen.getByTestId(/bookmarked button/i)).not.toHaveClass("bg-secondary");
+  });
 });
