@@ -65,6 +65,8 @@ const JobTable = () => {
                         dispatch(setIsEditing());
                         dispatch(setSelectedJob(job));
                       }}
+                      role="button"
+                      aria-label="edit"
                     />
                   </td>
                   <td className="max-[835px]:px-3 px-6 py-3">{job.jobTitle}</td>
@@ -118,6 +120,8 @@ const JobTable = () => {
                       dispatch(setIsEditing());
                       dispatch(setSelectedJob(job));
                     }}
+                    role="button"
+                    aria-label="edit"
                   />
                 </td>
                 <td className="py-3">{job.jobTitle}</td>
@@ -166,6 +170,8 @@ const JobTable = () => {
                       dispatch(setIsEditing());
                       dispatch(setSelectedJob(job));
                     }}
+                    role="button"
+                    aria-label="edit"
                   />
                 </td>
                 <td className="py-3">{job.jobTitle}</td>
