@@ -87,4 +87,30 @@ describe("FilterCategoriesButton component", () => {
 
     expect(screen.getByTestId(/bookmarked button/i)).not.toHaveClass("bg-secondary");
   });
+
+  test("mobile filter category select options can be selected", async () => {
+    renderWithProvider(
+      <FilterCategoriesButton />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [],
+          }
+        }
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect((screen.getByRole("option", { name: /all applications/i }) as HTMLOptionElement).selected).toBe(true);
+    expect((screen.getByRole("option", { name: /bookmarked/i }) as HTMLOptionElement).selected).toBe(false);
+
+    await user.selectOptions(screen.getByRole("combobox"), "Bookmarked");
+
+    expect((screen.getByRole("option", { name: /all applications/i }) as HTMLOptionElement).selected).toBe(false);
+    expect((screen.getByRole("option", { name: /bookmarked/i }) as HTMLOptionElement).selected).toBe(true);
+  });
 });
