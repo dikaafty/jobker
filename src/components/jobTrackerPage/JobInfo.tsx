@@ -47,6 +47,8 @@ const JobInfo = () => {
                 dispatch(setSelectedJob(null));
                 dispatch(setIsInfoOpen());
               }}
+              role="button"
+              aria-label="close"
             />
           </div>
 
