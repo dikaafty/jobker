@@ -88,4 +88,50 @@ describe("JobTable component", () => {
     expect(screen.getAllByText("15/08/2025")[0]).toBeInTheDocument();
     expect(screen.getAllByText("25/08/2025")[0]).toBeInTheDocument();
   });
+
+  test("renders tablet job table with correct elements", () => {
+    renderWithProvider(
+      <JobTable />,
+      {
+        preloadedState: {
+          jobTracker: {
+            jobs: [
+              {
+                id: 1,
+                jobTitle: "Front End Developer",
+                jobLocation: "Remote",
+                companyName: "Link AI",
+                status: "Applied",
+                dateSaved: "14/08/2025",
+                dateApplied: "15/08/2025",
+                deadline: "25/08/2025",
+              }
+            ],
+            activeCategory: "all",
+          }
+        }
+      }
+    );
+
+    expect(screen.getAllByRole("table")[1]).toBeInTheDocument();
+
+    expect(screen.getAllByText(/job position/i)[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/company/i)[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/location/i)[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/status/i)[1]).toBeInTheDocument();
+
+    expect(screen.queryAllByText(/date saved/i)[1]).toBeUndefined();
+    expect(screen.queryAllByText(/date applied/i)[1]).toBeUndefined();
+    expect(screen.queryAllByText(/deadline/i)[1]).toBeUndefined();
+
+    expect(screen.getAllByRole("button", { name: /edit/i })[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/front end developer/i)[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/link ai/i)[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/applied/i)[1]).toBeInTheDocument();
+    expect(screen.getAllByText(/remote/i)[1]).toBeInTheDocument();
+
+    expect(screen.queryAllByText("14/08/2025")[1]).toBeUndefined();
+    expect(screen.queryAllByText("15/08/2025")[1]).toBeUndefined();
+    expect(screen.queryAllByText("25/08/2025")[1]).toBeUndefined();
+  });
 });
