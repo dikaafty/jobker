@@ -72,6 +72,7 @@ const FilterCategoriesButton = () => {
                   dispatch(setActiveCategory(capitalize(filterCategory.category)));
                 }
               }}
+              data-testid={`${filterCategory.category} container`}
             >
               <p 
                 className={cn(
