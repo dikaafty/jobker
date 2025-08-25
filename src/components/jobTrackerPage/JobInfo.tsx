@@ -21,6 +21,7 @@ const JobInfo = () => {
         <div
           className="w-[90%] sm:w-130 bg-background px-5 py-6 border-1 border-muted rounded-xl font-jost
             animate-scale-up flex flex-col gap-5"
+          data-testid="job info"
         >
           <div className="flex justify-between gap-4">
             <div>
