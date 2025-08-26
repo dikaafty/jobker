@@ -2,7 +2,7 @@ import ThemeToggle from "../ThemeToggle";
 import { screen, userEvent, render } from "@/lib/test-utils";
 
 describe("ThemeToggle component", () => {
-  let user;
+  let user: ReturnType<typeof userEvent.setup>;
 
   beforeEach(() => {
     user = userEvent.setup();
