@@ -27,5 +27,6 @@ describe("Navbar component", () => {
     expect(screen.getByRole("link", { name: "ABOUT" })).toBeInTheDocument();
 
     expect(screen.getAllByRole("button")[0]).toBeInTheDocument(); // <= menu hamburger
+    expect(screen.getAllByRole("button")[1]).toBeInTheDocument(); // <= theme toggle button
   });
 });
