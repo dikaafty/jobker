@@ -1,2 +1,2 @@
 import AddJobButton from "../AddJobButton";
-import { screen, userEvent } from "@/lib/test-utils";
+import { screen, userEvent, renderWithProvider } from "@/lib/test-utils";
