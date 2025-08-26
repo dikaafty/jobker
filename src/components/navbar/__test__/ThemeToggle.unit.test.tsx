@@ -1,5 +1,5 @@
 import ThemeToggle from "../ThemeToggle";
-import { render, screen } from "@/lib/test-utils";
+import { render, screen, userEvent } from "@/lib/test-utils";
 
 describe("ThemeToggle component", () => {
   test("renders ThemeToggle component with correct elements", () => {
