@@ -6,5 +6,6 @@ describe("ThemeToggle component", () => {
     render(<ThemeToggle />);
 
     expect(screen.getByRole("button"));
+    expect(screen.getByTestId(/moon icon/i)).toBeInTheDocument();
   });
 });
