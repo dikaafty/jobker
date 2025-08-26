@@ -36,8 +36,12 @@ const ThemeToggle = () => {
     >
       {
         isDarkMode 
-        ? <Moon />
-        : <Sun />
+        ? <Moon 
+            data-testid="moon icon"
+          />
+        : <Sun 
+            data-testid="sun icon"
+          />
       }
     </button>
   )
