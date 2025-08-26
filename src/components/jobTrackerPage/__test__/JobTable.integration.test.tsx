@@ -1,2 +1,2 @@
 import JobTable from "../JobTable";
-import { screen, userEvent } from "@/lib/test-utils";
+import { screen, userEvent, renderWithProvider } from "@/lib/test-utils";
