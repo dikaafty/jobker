@@ -1,0 +1,1 @@
+import AboutContent from "../AboutContent";
