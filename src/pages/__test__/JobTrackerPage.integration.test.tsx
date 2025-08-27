@@ -117,4 +117,27 @@ describe("JobTrackerPage component", () => {
     expect(screen.getAllByText(/junior front end developer/i)[0]).toBeInTheDocument();
     expect(screen.getAllByText("Front End Developer")[0]).toBeInTheDocument();
   });
+
+  test("renders dialog when add job button is clicked", async () => {
+    renderWithProvider(
+      <JobTrackerPage />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: false,
+            activeCategory: "all",
+            filterCategories: [],
+            jobs: [],
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    expect(screen.queryByTestId(/dialog/i)).not.toBeInTheDocument();
+
+    await user.click(screen.getByText(/add job/i));
+
+    expect(screen.queryByTestId(/dialog/i)).toBeInTheDocument();
+  });
 });
