@@ -5,7 +5,7 @@ import JobTable from "@/components/jobTrackerPage/JobTable";
 import JobInfo from "@/components/jobTrackerPage/JobInfo";
 import transition from "@/lib/transition";
 
-const JobTrackerPage = () => {
+export const JobTrackerPage = () => {
   return (
     <>
       <FilterCategoriesButton />
