@@ -47,7 +47,10 @@ const AboutContent = () => {
 
           {
             jobkerGuide.length > 0 && jobkerGuide.map(guide => (
-              <div className="flex flex-col gap-2">
+              <div 
+                className="flex flex-col gap-2"
+                key={guide.title}
+              >
                 <p>• {guide.title}</p>
                 <p className="ml-3 text-sm sm:text-base font-normal">{guide.description}</p>
               </div>
