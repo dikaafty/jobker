@@ -153,4 +153,57 @@ describe("Dialog component", () => {
     expect(screen.queryByTestId("dialog")).not.toBeInTheDocument();
     expect(store.getState().jobTracker.isOpen).toBe(false);
   });
+
+  test("updates Redux store jobs state and closes the Dialog when required inputs filled and then Save Job button clicked", async () => {
+     const { store } = renderWithProvider(
+      <Dialog />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            selectedJob: null,
+            jobs: [],
+            filterCategories: [
+              { category: "BOOKMARKED" },
+              { category: "APPLYING" },
+              { category: "APPLIED" },
+            ],
+            jobTitle: "",
+            jobUrl: "",
+            jobLocation: "",
+            jobDescription: "",
+            companyName: "",
+            status: "Bookmarked",
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    const user = userEvent.setup();
+
+    expect(screen.getByTestId("dialog")).toBeInTheDocument();
+    expect(store.getState().jobTracker.jobs).toEqual([]);
+
+    await user.type(screen.getByLabelText(/job title/i), "Front End Developer");
+    await user.type(screen.getByLabelText(/job url/i), "https://www.remoterecruitzt.com/");
+    await user.type(screen.getByLabelText(/job location/i), "Munchen - Remote");
+    await user.type(screen.getByLabelText(/company name/i), "Bay AI");
+    await user.selectOptions(screen.getByLabelText(/status/i), "Applied");
+    await user.click(screen.getByRole("button", { name: /save job/i }));
+
+    expect(screen.queryByTestId("dialog")).not.toBeInTheDocument();
+    expect(store.getState().jobTracker.jobs).toEqual([{
+      id: 1,
+      jobTitle: "Front End Developer",
+      jobUrl: "https://www.remoterecruitzt.com/",
+      jobLocation: "Munchen - Remote",
+      jobDescription: "",
+      companyName: "Bay AI",
+      status: "Applied",
+      dateSaved: "27/08/2025",
+      dateApplied: "",
+      deadline: "",
+    }]);
+  });
 });
