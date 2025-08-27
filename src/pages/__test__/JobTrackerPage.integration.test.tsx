@@ -140,4 +140,45 @@ describe("JobTrackerPage component", () => {
 
     expect(screen.queryByTestId(/dialog/i)).toBeInTheDocument();
   });
+
+  test("renders new job in the job table when all dialog's required inputs are filled and then save job button is clicked", async () => {
+    renderWithProvider(
+      <JobTrackerPage />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            activeCategory: "all",
+            filterCategories: [
+              { category: "BOOKMARKED" },
+              { category: "APPLIED" },
+            ],
+            jobs: [],
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    // CTA element displayed because no jobs exist, so the table is not rendered
+    expect(screen.getByText(/your dashboard’s a bit lonely/i)).toBeInTheDocument();
+    expect(screen.queryAllByRole("table")[0]).toBeUndefined();
+
+    await user.type(screen.getByLabelText(/job title/i), "Front End Developer");
+    await user.type(screen.getByLabelText(/job url/i), "https://www.remoterecruitzt.com/");
+    await user.type(screen.getByLabelText(/job location/i), "Munchen - Remote");
+    await user.type(screen.getByLabelText(/company name/i), "Bay AI");
+    await user.selectOptions(screen.getByLabelText(/status/i), "Applied");
+    await user.click(screen.getByRole("button", { name: /save job/i }));
+
+    expect(screen.queryByText(/your dashboard’s a bit lonely/i)).not.toBeInTheDocument();
+    expect(screen.getAllByRole("table")[0]).toBeInTheDocument();
+
+    expect(screen.getAllByRole("button", { name: /edit/i })[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/front end developer/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/munchen - remote/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/bay ai/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText(/applied/i)[0]).toBeInTheDocument();
+    expect(screen.getAllByText("27/08/2025")[0]).toBeInTheDocument();
+  });
 });
