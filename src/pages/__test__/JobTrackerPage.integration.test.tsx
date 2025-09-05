@@ -1,5 +1,5 @@
 import { JobTrackerPage } from "../JobTrackerPage";
-import { screen, userEvent, renderWithProvider } from "@/lib/test-utils";
+import { screen, userEvent, renderWithProvider, queryByTestId } from "@/lib/test-utils";
 
 describe("JobTrackerPage component", () => {
   let user: ReturnType<typeof userEvent.setup>;
@@ -179,6 +179,6 @@ describe("JobTrackerPage component", () => {
     expect(screen.getAllByText(/munchen - remote/i)[0]).toBeInTheDocument();
     expect(screen.getAllByText(/bay ai/i)[0]).toBeInTheDocument();
     expect(screen.getAllByText(/applied/i)[0]).toBeInTheDocument();
-    expect(screen.getAllByText("27/08/2025")[0]).toBeInTheDocument();
+    expect(screen.getAllByText(new Date().toLocaleDateString("en-GB"))[0]).toBeInTheDocument();
   });
 });
