@@ -181,4 +181,37 @@ describe("JobTrackerPage component", () => {
     expect(screen.getAllByText(/applied/i)[0]).toBeInTheDocument();
     expect(screen.getAllByText(new Date().toLocaleDateString("en-GB"))[0]).toBeInTheDocument();
   });
+
+  test("renders job info when job row is clicked", async () => {
+    renderWithProvider(
+      <JobTrackerPage />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isInfoOpen: false,
+            activeCategory: "all",
+            filterCategories: [],
+            jobs: [
+              {
+                id: 1,
+                jobTitle: "Junior Front End Developer",
+                jobUrl: "https://www.remoterocketship.com/jobs/front-end-developer/",
+                jobLocation: "Manchester - Remote",
+                companyName: "Link AI",
+                status: "Applied",
+                dateSaved: "25/08/2025",
+              },
+            ]
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    expect(screen.queryByTestId(/job info/i)).not.toBeInTheDocument();
+
+    await user.click(screen.getAllByRole("row")[1]);
+
+    expect(screen.getByTestId(/job info/i)).toBeInTheDocument();
+  });
 });
