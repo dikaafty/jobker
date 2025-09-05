@@ -201,7 +201,7 @@ describe("Dialog component", () => {
       jobDescription: "",
       companyName: "Bay AI",
       status: "Applied",
-      dateSaved: "27/08/2025",
+      dateSaved: new Date().toLocaleDateString("en-GB"),
       dateApplied: "",
       deadline: "",
     }]);
