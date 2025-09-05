@@ -36,6 +36,10 @@ JOBKER is a clean and simple job tracking application built for developers, free
 
 - **Redux**
 
+- **Jest**
+
+- **React Testing Library**
+
 - **Framer Motion**
 
 - **Vite**
