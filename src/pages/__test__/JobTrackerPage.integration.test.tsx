@@ -214,4 +214,40 @@ describe("JobTrackerPage component", () => {
 
     expect(screen.getByTestId(/job info/i)).toBeInTheDocument();
   });
+
+  test("renders dialog with delete button when edit button in job row is clicked", async () => {
+    renderWithProvider(
+      <JobTrackerPage />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: false,
+            activeCategory: "all",
+            filterCategories: [],
+            jobs: [
+              {
+                id: 1,
+                jobTitle: "Junior Front End Developer",
+                jobUrl: "https://www.remoterocketship.com/jobs/front-end-developer/",
+                jobLocation: "Manchester - Remote",
+                companyName: "Link AI",
+                status: "Applied",
+                dateSaved: "25/08/2025",
+              },
+            ],
+            selectedJob: null,
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    expect(screen.queryByTestId(/dialog/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/delete job/i)).not.toBeInTheDocument();
+
+    await user.click(screen.getAllByRole("button", { name: /edit/i })[0]);
+
+    expect(screen.getByTestId(/dialog/i)).toBeInTheDocument();
+    expect(screen.getByText(/delete job/i)).toBeInTheDocument();
+  });
 });
