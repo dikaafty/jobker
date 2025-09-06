@@ -289,4 +289,51 @@ describe("JobTrackerPage component", () => {
     expect(screen.queryByTestId(/dialog/i)).not.toBeInTheDocument();
     expect(screen.queryAllByRole("row")[1]).toBeUndefined();
   });
+
+  test("adds a job, updates it, and displays the edited job", async () => {
+    renderWithProvider(
+      <JobTrackerPage />,
+      {
+        preloadedState: {
+          jobTracker: {
+            isOpen: true,
+            activeCategory: "all",
+            filterCategories: [],
+            jobs: [
+              {
+                id: 1,
+                jobTitle: "Waitress",
+                jobUrl: "https://www.linekad.com/",
+                jobLocation: "Manchester, England",
+                companyName: "Karasu Cook",
+                status: "Applied",
+                dateSaved: new Date().toLocaleDateString("en-GB"),
+              },
+            ],
+            selectedJob: null,
+          }
+        },
+        storeType: "integration"
+      }
+    );
+
+    await user.type(screen.getByLabelText(/job title/i), "Front End Developer");
+    await user.type(screen.getByLabelText(/job url/i), "https://www.remoterecruitzt.com/");
+    await user.type(screen.getByLabelText(/job location/i), "Munchen - Remote");
+    await user.type(screen.getByLabelText(/company name/i), "Bay AI");
+    await user.click(screen.getByRole("button", { name: /save job/i }));
+
+    expect(screen.getAllByRole("row")[1]).toBeInTheDocument();
+    expect(screen.getAllByText("Front End Developer")[0]).toBeInTheDocument();
+    expect(screen.queryAllByText("Junior Front End Developer")[0]).toBeUndefined();
+
+    await user.click(screen.getAllByRole("button", { name: /edit/i })[0]);
+    await user.clear(screen.getByLabelText(/job title/i));
+    await user.type(screen.getByLabelText(/job title/i), "Junior Front End Developer");
+    await user.click(screen.getByRole("button", { name: /save job/i }));
+
+    expect(screen.getAllByRole("row")[1]).toBeInTheDocument();
+    expect(screen.queryAllByText("Front End Developer")[0]).toBeUndefined();
+    expect(screen.getAllByText("Junior Front End Developer")[0]).toBeInTheDocument();
+  });
 });
