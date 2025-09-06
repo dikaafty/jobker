@@ -37,4 +37,28 @@ describe("Navbar component", () => {
       return element?.textContent.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
     })).toBeInTheDocument();
   });
+
+  test("navigates to job tracker page when track job link is clicked", async () => {
+    render(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={["/"]}>
+          <Navbar />
+          <Routes>
+            <Route index element={<Homepage />} />
+            <Route path="/job" element={<JobTrackerPage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </MemoryRouter>
+      </Provider>
+    );
+
+    expect(screen.getByText((_, element) => {
+      return element?.textContent.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
+    })).toBeInTheDocument();
+
+    await user.click(screen.getByRole("link", { name: "Track Job" }));
+
+    expect(screen.getByRole("button", { name: /add job/i })); // <= presence of add job button means it's in the job 
+                                                              // tracker page
+  });
 });
