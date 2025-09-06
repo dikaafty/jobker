@@ -11,4 +11,28 @@ describe("Navbar component", () => {
   beforeEach(() => {
     user = userEvent.setup();
   });
+
+  test("navigates to home page when home link is clicked", async () => {
+    renderWithRouter(
+      <>
+        <Navbar />
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/job" element={<JobTrackerPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+      </>,
+      {
+        initialEntries: ["/about"],
+      }
+    );
+
+    expect(screen.getByText(/track smarter/i)).toBeInTheDocument();
+
+    await user.click(screen.getByRole("link", { name: "Home" }));
+    
+    expect(screen.getByText((_, element) => {
+      return element?.textContent.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
+    })).toBeInTheDocument();
+  });
 });
