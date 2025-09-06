@@ -34,7 +34,7 @@ describe("Navbar component", () => {
     await user.click(screen.getByRole("link", { name: "Home" }));
     
     expect(screen.getByText((_, element) => {
-      return element?.textContent.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
+      return element?.textContent?.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
     })).toBeInTheDocument();
   });
 
@@ -53,7 +53,7 @@ describe("Navbar component", () => {
     );
 
     expect(screen.getByText((_, element) => {
-      return element?.textContent.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
+      return element?.textContent?.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
     })).toBeInTheDocument();
 
     await user.click(screen.getByRole("link", { name: "Track Job" }));
@@ -78,7 +78,7 @@ describe("Navbar component", () => {
     );
 
     expect(screen.getByText((_, element) => {
-      return element?.textContent.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
+      return element?.textContent?.replace(/\s+/g, " ").trim() ==="YOUR CAREER DASHBOARD STARTS HERE"
     })).toBeInTheDocument();
 
     await user.click(screen.getByRole("link", { name: "About" }));
