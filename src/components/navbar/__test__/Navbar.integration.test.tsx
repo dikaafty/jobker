@@ -6,5 +6,5 @@ import { AboutPage } from "@/pages/AboutPage";
 import Navbar from "../Navbar";
 
 describe("Navbar component", () => {
-  
+  let user: ReturnType<typeof userEvent.setup>;
 });
