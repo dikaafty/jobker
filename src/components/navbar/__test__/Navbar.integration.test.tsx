@@ -1,5 +1,6 @@
 import { renderWithRouter, screen, userEvent, render } from "@/lib/test-utils";
 import { Route, Routes, MemoryRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 import { Homepage } from "@/pages/Homepage";
 import { JobTrackerPage } from "@/pages/JobTrackerPage";
 import { AboutPage } from "@/pages/AboutPage";
