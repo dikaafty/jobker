@@ -4,3 +4,7 @@ import { Homepage } from "@/pages/Homepage";
 import { JobTrackerPage } from "@/pages/JobTrackerPage";
 import { AboutPage } from "@/pages/AboutPage";
 import Navbar from "../Navbar";
+
+describe("Navbar component", () => {
+  
+});
