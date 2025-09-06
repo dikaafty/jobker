@@ -1,7 +1,7 @@
 import HeroSection from "@/components/homepage/HeroSection";
 import transition from "@/lib/transition";
 
-const Homepage = () => {
+export const Homepage = () => {
   return (
     <>
       <HeroSection />
