@@ -1,5 +1,5 @@
 import { renderWithRouter, screen, userEvent, render } from "@/lib/test-utils";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, MemoryRouter } from "react-router-dom";
 import { Homepage } from "@/pages/Homepage";
 import { JobTrackerPage } from "@/pages/JobTrackerPage";
 import { AboutPage } from "@/pages/AboutPage";
