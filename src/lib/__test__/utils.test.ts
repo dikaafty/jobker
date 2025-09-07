@@ -45,3 +45,27 @@ test("combines class names from arrays/strings and applies Tailwind merge rules"
 test("capitalize string", () => {
   expect(capitalize("my name is antwon")).toBe("My name is antwon");
 });
+
+test("adds and removes animation class when element intersects", () => {
+  const element = document.createElement("div");
+  element.dataset.animate = "fade-in";
+
+  const ref = { current: element };
+
+  const disconnect = runObserver(ref);
+
+  // Access the mock
+  const mockObserver = IntersectionObserverMock.instance!;
+  expect(mockObserver).toBeDefined();
+
+  // Simulate entering viewport
+  mockObserver.triggerIntersect(true, element);
+  expect(element.classList.contains("fade-in")).toBe(true);
+
+  // Simulate leaving viewport
+  mockObserver.triggerIntersect(false, element);
+  expect(element.classList.contains("fade-in")).toBe(false);
+
+  // cleanup
+  disconnect();
+});
