@@ -6,6 +6,7 @@ class IntersectionObserverMock {
 
   constructor(callback: IntersectionObserverCallback) {
     this.callback = callback;
+    IntersectionObserverMock.instance = this;
   };
 
   observe = (element: Element) => {
@@ -30,6 +31,8 @@ class IntersectionObserverMock {
     
     this.callback(entry, this as unknown as IntersectionObserver);
   };
+
+  static instance: IntersectionObserverMock | null = null;
 }
 
 (global as any).IntersectionObserver = IntersectionObserverMock;
